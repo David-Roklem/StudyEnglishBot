@@ -8,6 +8,12 @@ kbsbcb = ReplyKeyboardMarkup(resize_keyboard=True)
 kbsbcb.add(sb).add(cb)
 
 
+# Cancel_command_button
+ccb = KeyboardButton("/cancel")
+kccb = ReplyKeyboardMarkup(resize_keyboard=True)
+kccb.add(ccb)
+
+
 # A user chooses a level
 bl0 = KeyboardButton("/cancel")
 bl1 = KeyboardButton("/Низкий")
@@ -54,5 +60,6 @@ kbt_h.add(bt_h0).add(bt_h1, bt_h2, bt_h3)
 
 # A user decides to start learning
 bt_start_learning = KeyboardButton("Начать заниматься")
+bt_cancel_command = KeyboardButton("/cancel")
 kb_start_learning = ReplyKeyboardMarkup(resize_keyboard=True)
-kb_start_learning.add(bt_start_learning)
+kb_start_learning.add(bt_start_learning).add(bt_cancel_command)

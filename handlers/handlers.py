@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardRemove
-from keyboards.keyboard import kbsbcb, kbl, kbt_e, kbt_m, kbt_h, kb_start_learning
+from keyboards.keyboard import kbsbcb, kbl, kbt_e, kbt_m, kbt_h, kb_start_learning, kccb
 from FSMstates.states import States
 from topics_all import list_of_topics
 import texts
@@ -79,7 +79,7 @@ async def begin_learning(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         await message.answer(f"1️⃣ {data['module'][1][0]}", reply_markup=ReplyKeyboardRemove())
         if len(data['module'][1]) == 3:
-            await message.answer(f"{data['module'][1][2]['hint']}")
+            await message.answer(f"{data['module'][1][2]['hint']}", reply_markup=kccb)
     await States.next()
 
 
@@ -93,7 +93,7 @@ async def process_q_1(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][1][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"2️⃣ {data['module'][2][0]}")
+        await message.answer(f"2️⃣ {data['module'][2][0]}", reply_markup=kccb)
         if len(data['module'][2]) == 3:
             await message.answer(f"{data['module'][2][2]['hint']}")
     await States.next()
@@ -109,7 +109,7 @@ async def process_q_2(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][2][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"3️⃣ {data['module'][3][0]}")
+        await message.answer(f"3️⃣ {data['module'][3][0]}", reply_markup=kccb)
         if len(data['module'][3]) == 3:
             await message.answer(f"{data['module'][3][2]['hint']}")
     await States.next()
@@ -125,7 +125,7 @@ async def process_q_3(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][3][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"4️⃣ {data['module'][4][0]}")
+        await message.answer(f"4️⃣ {data['module'][4][0]}", reply_markup=kccb)
         if len(data['module'][4]) == 3:
             await message.answer(f"{data['module'][4][2]['hint']}")
     await States.next()
@@ -141,7 +141,7 @@ async def process_q_4(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][4][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"5️⃣ {data['module'][5][0]}")
+        await message.answer(f"5️⃣ {data['module'][5][0]}", reply_markup=kccb)
         if len(data['module'][5]) == 3:
             await message.answer(f"{data['module'][5][2]['hint']}")
     await States.next()
@@ -157,7 +157,7 @@ async def process_q_1(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][5][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"6️⃣ {data['module'][6][0]}")
+        await message.answer(f"6️⃣ {data['module'][6][0]}", reply_markup=kccb)
         if len(data['module'][6]) == 3:
             await message.answer(f"{data['module'][6][2]['hint']}")
     await States.next()
@@ -173,7 +173,7 @@ async def process_q_6(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][6][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"7️⃣ {data['module'][7][0]}")
+        await message.answer(f"7️⃣ {data['module'][7][0]}", reply_markup=kccb)
         if len(data['module'][7]) == 3:
             await message.answer(f"{data['module'][7][2]['hint']}")
     await States.next()
@@ -189,7 +189,7 @@ async def process_q_7(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][7][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"8️⃣ {data['module'][8][0]}")
+        await message.answer(f"8️⃣ {data['module'][8][0]}", reply_markup=kccb)
         if len(data['module'][8]) == 3:
             await message.answer(f"{data['module'][8][2]['hint']}")
     await States.next()
@@ -205,7 +205,7 @@ async def process_q_8(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][8][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"9️⃣ {data['module'][9][0]}")
+        await message.answer(f"9️⃣ {data['module'][9][0]}", reply_markup=kccb)
         if len(data['module'][9]) == 3:
             await message.answer(f"{data['module'][9][2]['hint']}")
     await States.next()
@@ -221,7 +221,7 @@ async def process_q_9(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][9][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"🔟 {data['module'][10][0]}")
+        await message.answer(f"🔟 {data['module'][10][0]}", reply_markup=kccb)
         if len(data['module'][10]) == 3:
             await message.answer(f"{data['module'][10][2]['hint']}")
     await States.next()
@@ -238,5 +238,5 @@ async def process_q_10(message: types.Message, state: FSMContext):
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][10][1][0]}</b>",
             parse_mode="HTML")
         await message.answer(f"Ваш результат: <b>{data['score']} из {len(data['module']) - 1}</b>", 
-        parse_mode="HTML")
+        parse_mode="HTML", reply_markup=kbsbcb)
     await state.finish()
