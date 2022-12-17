@@ -10,9 +10,17 @@ topic_easy1 = [
     А. Б. Г. Д.
     """,
     ("Алина приехала в новый город",
-    "Alina came to a new city"),
+    [
+        "Alina came to a new city",
+        "Alina have come to a new city",
+        "Alina've come to a new city"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>come</u></b> |"}),
     ("На улице было очень холодно",
-    "It was very cold outside"),
+    [
+        "It was very cold outside"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>outside</u></b> |"}),
     ("На улице идёт дождь, тебе следует взять зонт",
     "It's raining outside, you should take an umbrella"),
     ("У нас закончился хлеб, нам нужно найти магазин",
@@ -248,5 +256,3 @@ topic_easy2 = [
         "Thank you!"
     ])
 ]
-
-print(topic_easy2[1][1])

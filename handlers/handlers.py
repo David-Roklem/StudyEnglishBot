@@ -77,7 +77,9 @@ async def determine_topic_and_show_first_question(message: types.Message, state:
 @dp.message_handler(Text(equals='Начать заниматься', ignore_case=True), state=States.show_whole_text)
 async def begin_learning(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
-        await message.answer(f"{data['module'][1][0]}", reply_markup=ReplyKeyboardRemove())
+        await message.answer(f"1️⃣ {data['module'][1][0]}", reply_markup=ReplyKeyboardRemove())
+        if len(data['module'][1]) == 3:
+            await message.answer(f"{data['module'][1][2]['hint']}")
     await States.next()
 
 
@@ -91,7 +93,9 @@ async def process_q_1(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][1][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][2][0]}")
+        await message.answer(f"2️⃣ {data['module'][2][0]}")
+        if len(data['module'][2]) == 3:
+            await message.answer(f"{data['module'][2][2]['hint']}")
     await States.next()
 
 
@@ -105,7 +109,9 @@ async def process_q_2(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][2][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][3][0]}")
+        await message.answer(f"3️⃣ {data['module'][3][0]}")
+        if len(data['module'][3]) == 3:
+            await message.answer(f"{data['module'][3][2]['hint']}")
     await States.next()
 
 
@@ -119,7 +125,9 @@ async def process_q_3(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][3][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][4][0]}")
+        await message.answer(f"4️⃣ {data['module'][4][0]}")
+        if len(data['module'][4]) == 3:
+            await message.answer(f"{data['module'][4][2]['hint']}")
     await States.next()
 
 
@@ -133,7 +141,9 @@ async def process_q_4(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][4][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][5][0]}")
+        await message.answer(f"5️⃣ {data['module'][5][0]}")
+        if len(data['module'][5]) == 3:
+            await message.answer(f"{data['module'][5][2]['hint']}")
     await States.next()
 
 
@@ -147,7 +157,9 @@ async def process_q_1(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][5][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][6][0]}")
+        await message.answer(f"6️⃣ {data['module'][6][0]}")
+        if len(data['module'][6]) == 3:
+            await message.answer(f"{data['module'][6][2]['hint']}")
     await States.next()
 
 
@@ -161,7 +173,9 @@ async def process_q_6(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][6][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][7][0]}")
+        await message.answer(f"7️⃣ {data['module'][7][0]}")
+        if len(data['module'][7]) == 3:
+            await message.answer(f"{data['module'][7][2]['hint']}")
     await States.next()
 
 
@@ -175,7 +189,9 @@ async def process_q_7(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][7][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][8][0]}")
+        await message.answer(f"8️⃣ {data['module'][8][0]}")
+        if len(data['module'][8]) == 3:
+            await message.answer(f"{data['module'][8][2]['hint']}")
     await States.next()
 
 
@@ -189,7 +205,9 @@ async def process_q_8(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][8][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][9][0]}")
+        await message.answer(f"9️⃣ {data['module'][9][0]}")
+        if len(data['module'][9]) == 3:
+            await message.answer(f"{data['module'][9][2]['hint']}")
     await States.next()
 
 
@@ -203,7 +221,9 @@ async def process_q_9(message: types.Message, state: FSMContext):
         else:
             await message.reply(f"К сожалению, ответ неверный...😔 Один из возможных вариантов: <b>{data['module'][9][1][0]}</b>",
             parse_mode="HTML")
-        await message.answer(f"{data['module'][10][0]}")
+        await message.answer(f"🔟 {data['module'][10][0]}")
+        if len(data['module'][10]) == 3:
+            await message.answer(f"{data['module'][10][2]['hint']}")
     await States.next()
 
 
