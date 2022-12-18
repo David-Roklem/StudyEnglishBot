@@ -1,4 +1,4 @@
-# First element of the list is the whole text
+# First element of the list is a whole text
 topic_easy1 = [
     """
     Алина приехала в новый город. На улице было очень холодно.
@@ -7,7 +7,8 @@ topic_easy1 = [
     Сегодня мы собираемся выйти погулять, потому что на улице тепло.
     В автобусах есть специальные сиденья для беременных женщин.
     В автобусах есть специальные сиденья для беременных женщин.
-    А. Б. Г. Д.
+    Этот футбольный матч довольно скучный. Моей жене нужны новые брюки.
+    Мне кажется, завтра будет плохая погода.
     """,
     ("Алина приехала в новый город",
     [
@@ -18,25 +19,80 @@ topic_easy1 = [
     {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>come</u></b> |"}),
     ("На улице было очень холодно",
     [
-        "It was very cold outside"
+        "It was very cold outside",
+        "It was really cold outside"
     ],
     {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>outside</u></b> |"}),
     ("На улице идёт дождь, тебе следует взять зонт",
-    "It's raining outside, you should take an umbrella"),
+    [
+        "It's raining outside, you should take an umbrella",
+        "It is raining outside, you should take an umbrella"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>should</u></b> |"}),
     ("У нас закончился хлеб, нам нужно найти магазин",
-    "We ran out of bread, we need to/have to find a shop"),
+    [
+        "We ran out of bread, we need to find a shop",
+        "We've run out of bread, we need to find a shop",
+        "We have run out of bread, we need to find a shop",
+        "We ran out of bread, we need to find a store"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>run out of, need to</u></b> |"}),
     ("Сегодня мы собираемся выйти погулять, потому что на улице тепло",
-    "Today we are going to go out because it's warm outside"),
+    [
+        "Today we are going to go out because it's warm outside",
+        "Today we are planning to go out because it's warm outside",
+        "Today we're going to go out because it's warm outside",
+        "Today we're planning to go out because it's warm outside"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>go out</u></b> |"}),
     ("В автобусах есть специальные сиденья для беременных женщин",
-    "Buses have special seats for pregnant women"),
-    ("А",
-    "a"),
-    ("Б",
-    "b"),
-    ("Г",
-    "g"),
-    ("Д",
-    "d"),
+    [
+        "There are special seats for pregnant women in buses"
+        "Buses have special seats for pregnant women",
+        "There are special seats in buses for pregnant women",
+    ]),
+    ("Этот футбольный матч довольно скучный",
+    [
+        "This football match is pretty boring",
+        "This football match is quite boring",
+        "This football match is rather boring",
+        "This football match is fairly boring",
+        "This soccer match is pretty boring",
+        "This soccer match is quite boring",
+        "This soccer match is rather boring",
+        "This soccer match is fairly boring",
+        "This football game is pretty boring",
+        "This football game is quite boring",
+        "This football game is rather boring",
+        "This football game is fairly boring",
+        "This soccer game is pretty boring",
+        "This soccer game is quite boring",
+        "This soccer game is rather boring",
+        "This soccer game is fairly boring"
+    ]),
+    ("Моей жене нужны новые брюки",
+    [
+        "My wife needs new pants",
+        "My wife needs new trousers",
+        "My wife requires new pants",
+        "My wife requires new trousers"
+    ]),
+    ("Мне кажется, завтра будет плохая погода",
+    [
+        "It seems to me that tomorrow will be bad weather",
+        "It seems to me tomorrow will be bad weather",
+        "It seems tomorrow will be bad weather",
+        "It seems that tomorrow will be bad weather"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to seem</u></b> |"}),
+    ("Дядя Федя очень высокий",
+    [
+        "Uncle Fediya is very tall",
+        "Uncle Fediya is really tall",
+        "Uncle Fediya's very tall",
+        "Uncle Fediya's really tall"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>Fediya</u></b> |"}),
 ]
 
 
