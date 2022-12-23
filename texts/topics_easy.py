@@ -69,8 +69,8 @@ topic_easy1 = [
     ]),
     ("Вы можете оплатить его отдельно за 9$",
     [
-        "You can pay for it separately",
-        "You may pay for it separately",
+        "You can pay for it separately for 9$",
+        "You may pay for it separately for 9$",
     ],
     {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>separately</u></b> |"}),
     ("Хорошо, меня устраивает. Я забронирую этот номер и завтрак",
