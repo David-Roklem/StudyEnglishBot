@@ -1,33 +1,186 @@
-whole_text_medium_topic1 = """
-Уважаемые дамы и господа, мы приветствуем вас на борту нашего самолёта.
-Убедитесь, что всё ваши цифровые устройства находятся в авиа режиме или выключены.
-Пожалуйста, не забудьте пристегнуть ремни и снять наушники.
-Полёт будет проходить на высоте 10 километров со скоростью 800 километров в час.
-Авиалайнер будет пролетать над сушей и морем. Ориентировочное время прибытия через час и пятьдесят минут.
-Уважаемые дамы и господа, мы приближаемся к зоне турбулентности,
-пожалуйста, займите свои места, пристегните  ваши ремни и откройте шторки иллюминатора.
-Через 20 минут мы совершим посадку в аэропорту назначения.
-От лица (on behalf) авиакомпании благодарим вас за ваш выбор и надеемся, что вы довольны полётом.
-"""
-
-
-medium_topic1 = [
-("Уважаемые дамы и господа, мы приветствуем вас на борту нашего самолёта",
-"Dear ladies and gentlemen, we are(we're) greeting(greet) you on board(aboard) of our plane(aircraft/airplane)"),
-("Убедитесь, что всё ваши цифровые устройства находятся в авиа режиме или выключены",
-"Make sure that all your gadgets are in airplane mode or turned(switched) off"),
-("Пожалуйста, не забудьте пристегнуть ремни и снять наушники",
-"Please don't forget to fasten seat belts and снять (remove/take off) headphones (earphones)"),
-(" Полёт будет проходить на высоте 10 километров со скоростью 800 километров в час",
-"The flight is going to(is gonna/will) be at the altitude of 10 kilometers with the speed of 800 kilometers per hour"),
-("Авиалайнер будет пролетать над сушей и морем",
-"The aircraft will be flying (is going to/is gonna fly) over land and sea"),
-("Ориентировочное время прибытия через час и пятьдесят минут",
-"Approximate arrival time(time of arrival) is in an(one) hour and fifty minutes"),
-("Уважаемые дамы и господа мы приближаемся к зоне турбулентности, пожалуйста займите свои места, пристегните  ваши ремни и откройте шторки иллюминатора",
-"Dear ladies and gentlemen, we're(we are) approaching a turbulence zonezone, please take you seats, fasten your seat belts and open the window blinds"),
-("Через 20 минут мы совершим посадку в аэропорту назначения",
-"In twenty minutes we're(are) gonna(going to/will) land in the destination point"),
-("От лица (on behalf) авиакомпании благодарим вас за ваш выбор и надеемся, что вы довольны полётом",
-"On behalf of the airline we thank you for your choice and hope that you are(you're) satisfied(pleased/content) with the flight")
+at_the_market = [
+    """
+    Доброе утро! Мне нужны свежие овощи.
+    Доброе утро! Выбирайте, что понравится, все овощи у меня свежие.
+    Тогда я возьму 2 килограмма помидоров и 2 киллограмма огурцов, и 3 перца.
+    Возьмите еще морковь, она очень сладкая. Хорошо, вы уговорили меня, положите еще одну морковь.
+    С вас 8 долларов. Где я могу купить яблоки?
+    Пройдите прямо, а затем поверните направо после лавки с зеленью, там будут фрукты.
+    Спасибо огромное! Хорошего дня! Спасибо!
+    """,
+    ("Доброе утро! Мне нужны свежие овощи",
+    [
+        "Good morning! I need fresh vegetables",
+        "Good morning! I require fresh vegetables"
+    ]),
+    ("Доброе утро! Выбирайте, что понравится, все овощи у меня свежие",
+    [
+        "Good morning! Choose whatever you like, all my vegetables are fresh",
+        "Good morning! Choose whatever you like, I have only fresh vegetables",
+        "Good morning! Choose whatever you like, I've got only fresh vegetables",
+        "Good morning! Choose whatever you like, I have got only fresh vegetables",
+        "Good morning! Pick whatever you like, all my vegetables are fresh",
+        "Good morning! Pick whatever you like, I have only fresh vegetables",
+        "Good morning! Pick whatever you like, I've got only fresh vegetables",
+        "Good morning! Pick whatever you like, I have got only fresh vegetables",
+        "Good morning! Pick whatever you fancy, all my vegetables are fresh",
+        "Good morning! Pick whatever you fancy, I have only fresh vegetables",
+        "Good morning! Pick whatever you fancy, I've got only fresh vegetables",
+        "Good morning! Pick whatever you fancy, I have got only fresh vegetables"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>wahtever</u></b> |"}),
+    ("Тогда я возьму 2 килограмма помидоров и 2 киллограмма огурцов, и 3 перца",
+    [
+        "In that case I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "In this case I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "In that case I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "In this case I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "Then I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "Then I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "Then I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
+        "Then I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers"
+    ]),
+    ("Возьмите еще морковь, она очень сладкая",
+    [
+        "Take carrot as well, it is very sweet",
+        "Take carrot as well, it's very sweet",
+        "Take carrot as well, it is really sweet",
+        "Take carrot as well, it's really sweet",
+        "Take also carrot, it is very sweet",
+        "Take also carrot, it's very sweet",
+        "Take also carrot, it is really sweet",
+        "Take also carrot, it's really sweet",
+    ]),
+    ("Хорошо, вы уговорили меня, положите еще одну морковь",
+    [
+        "Ok, you convinced me, put also one carrot",
+        "Ok, you convinced me, put also a carrot",
+        "Ok, you've convinced me, put also one carrot",
+        "Ok, you've convinced me, put also a carrot",
+        "Ok, you have convinced me, put also one carrot",
+        "Ok, you have convinced me, put also a carrot",
+        "fine, you convinced me, put also one carrot",
+        "fine, you convinced me, put also a carrot",
+        "fine, you've convinced me, put also one carrot",
+        "fine, you've convinced me, put also a carrot",
+        "fine, you have convinced me, put also one carrot",
+        "fine, you have convinced me, put also a carrot",
+        "alright, you convinced me, put also one carrot",
+        "alright, you convinced me, put also a carrot",
+        "alright, you've convinced me, put also one carrot",
+        "alright, you've convinced me, put also a carrot",
+        "alright, you have convinced me, put also one carrot",
+        "alright, you have convinced me, put also a carrot",
+    ]),
+    ("С вас 8 долларов",
+    [
+        "That'll be 8 dollars from you",
+        "That will be 8 dollars from you"
+        "That'll be 8 dollars",
+        "That will be 8 dollars",
+        "It'll be 8 dollars from you",
+        "It will be 8 dollars from you"
+        "It'll be 8 dollars",
+        "It will be 8 dollars",
+    ]),
+    ("Где я могу приобрести яблоки?",
+    [
+        "Where can I purchase apples?",
+        "Where could I purchase apples?"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>purchase</u></b> |"}),
+    ("Пройдите прямо, а затем поверните направо после лавки с зеленью, там будут фрукты",
+    [
+        "Go straight and then turn right after a greenery stall, there'll be fruit",
+        "Go ahead and then turn right after a greenery stall, there'll be fruit",
+        "Go straight ahead and then turn right after a greenery stall, there'll be fruit",
+        "Go forward and then turn right after a greenery stall, there'll be fruit",
+        "Go straight forward and then turn right after a greenery stall, there'll be fruit",
+        "Go straight and then turn right beyond a greenery stall, there'll be fruit",
+        "Go ahead and then turn right beyond a greenery stall, there'll be fruit",
+        "Go straight ahead and then turn right beyond a greenery stall, there'll be fruit",
+        "Go forward and then turn right beyond a greenery stall, there'll be fruit",
+        "Go straight forward and then turn right beyond a greenery stall, there'll be fruit",
+        "Go straight and then turn right after a greenery stall, there'll be fruits",
+        "Go ahead and then turn right after a greenery stall, there'll be fruits",
+        "Go straight ahead and then turn right after a greenery stall, there'll be fruits",
+        "Go forward and then turn right after a greenery stall, there'll be fruits",
+        "Go straight forward and then turn right after a greenery stall, there'll be fruits",
+        "Go straight and then turn right beyond a greenery stall, there'll be fruist",
+        "Go ahead and then turn right beyond a greenery stall, there'll be fruits",
+        "Go straight ahead and then turn right beyond a greenery stall, there'll be fruits",
+        "Go forward and then turn right beyond a greenery stall, there'll be fruits",
+        "Go straight forward and then turn right beyond a greenery stall, there'll be fruits",
+        "Go straight and then turn right after a greenery stall, there will be fruit",
+        "Go ahead and then turn right after a greenery stall, there will be fruit",
+        "Go straight ahead and then turn right after a greenery stall, there will be fruit",
+        "Go forward and then turn right after a greenery stall, there will be fruit",
+        "Go straight forward and then turn right after a greenery stall, there will be fruit",
+        "Go straight and then turn right beyond a greenery stall, there will be fruit",
+        "Go ahead and then turn right beyond a greenery stall, there will be fruit",
+        "Go straight ahead and then turn right beyond a greenery stall, there will be fruit",
+        "Go forward and then turn right beyond a greenery stall, there will be fruit",
+        "Go straight forward and then turn right beyond a greenery stall, there will be fruit",
+        "Go straight and then turn right after a greenery stall, there will be fruits",
+        "Go ahead and then turn right after a greenery stall, there will be fruits",
+        "Go straight ahead and then turn right after a greenery stall, there will be fruits",
+        "Go forward and then turn right after a greenery stall, there will be fruits",
+        "Go straight forward and then turn right after a greenery stall, there will be fruits",
+        "Go straight and then turn right beyond a greenery stall, there will be fruist",
+        "Go ahead and then turn right beyond a greenery stall, there will be fruits",
+        "Go straight ahead and then turn right beyond a greenery stall, there will be fruits",
+        "Go forward and then turn right beyond a greenery stall, there will be fruits",
+        "Go straight forward and then turn right beyond a greenery stall, there will be fruits",
+        "Go straight and then turn right after a greenery shop, there'll be fruit",
+        "Go ahead and then turn right after a greenery shop, there'll be fruit",
+        "Go straight ahead and then turn right after a greenery shop, there'll be fruit",
+        "Go forward and then turn right after a greenery shop, there'll be fruit",
+        "Go straight forward and then turn right after a greenery shop, there'll be fruit",
+        "Go straight and then turn right beyond a greenery shop, there'll be fruit",
+        "Go ahead and then turn right beyond a greenery shop, there'll be fruit",
+        "Go straight ahead and then turn right beyond a greenery shop, there'll be fruit",
+        "Go forward and then turn right beyond a greenery shop, there'll be fruit",
+        "Go straight forward and then turn right beyond a greenery shop, there'll be fruit",
+        "Go straight and then turn right after a greenery shop, there'll be fruits",
+        "Go ahead and then turn right after a greenery shop, there'll be fruits",
+        "Go straight ahead and then turn right after a greenery shop, there'll be fruits",
+        "Go forward and then turn right after a greenery shop, there'll be fruits",
+        "Go straight forward and then turn right after a greenery shop, there'll be fruits",
+        "Go straight and then turn right beyond a greenery shop, there'll be fruist",
+        "Go ahead and then turn right beyond a greenery shop, there'll be fruits",
+        "Go straight ahead and then turn right beyond a greenery shop, there'll be fruits",
+        "Go forward and then turn right beyond a greenery shop, there'll be fruits",
+        "Go straight forward and then turn right beyond a greenery shop, there'll be fruits",
+        "Go straight and then turn right after a greenery shop, there will be fruit",
+        "Go ahead and then turn right after a greenery shop, there will be fruit",
+        "Go straight ahead and then turn right after a greenery shop, there will be fruit",
+        "Go forward and then turn right after a greenery shop, there will be fruit",
+        "Go straight forward and then turn right after a greenery shop, there will be fruit",
+        "Go straight and then turn right beyond a greenery shop, there will be fruit",
+        "Go ahead and then turn right beyond a greenery shop, there will be fruit",
+        "Go straight ahead and then turn right beyond a greenery shop, there will be fruit",
+        "Go forward and then turn right beyond a greenery shop, there will be fruit",
+        "Go straight forward and then turn right beyond a greenery shop, there will be fruit",
+        "Go straight and then turn right after a greenery shop, there will be fruits",
+        "Go ahead and then turn right after a greenery shop, there will be fruits",
+        "Go straight ahead and then turn right after a greenery shop, there will be fruits",
+        "Go forward and then turn right after a greenery shop, there will be fruits",
+        "Go straight forward and then turn right after a greenery shop, there will be fruits",
+        "Go straight and then turn right beyond a greenery shop, there will be fruist",
+        "Go ahead and then turn right beyond a greenery shop, there will be fruits",
+        "Go straight ahead and then turn right beyond a greenery shop, there will be fruits",
+        "Go forward and then turn right beyond a greenery shop, there will be fruits",
+        "Go straight forward and then turn right beyond a greenery shop, there will be fruits",
+    ]),
+    ("Спасибо огромное! Хорошего дня!",
+    [
+        "Thanks a lot! Have a nice day!",
+        "Thank you so much! Have a nice day!",
+        "Thank you very much! Have a nice day!"
+    ]),
+    ("Спасибо!",
+    [
+        "Thanks!",
+        "Thank you!"
+    ])
 ]

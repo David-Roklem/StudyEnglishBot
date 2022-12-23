@@ -1,314 +1,253 @@
 # First element of the list is a whole text
 topic_easy1 = [
     """
-    Алина приехала в новый город. На улице было очень холодно.
-    На улице идёт дождь, тебе следует взять зонт.
-    У нас закончился хлеб, нам нужно найти магазин.
-    Сегодня мы собираемся выйти погулять, потому что на улице тепло.
-    В автобусах есть специальные сиденья для беременных женщин.
-    В автобусах есть специальные сиденья для беременных женщин.
-    Этот футбольный матч довольно скучный. Моей жене нужны новые брюки.
-    Мне кажется, завтра будет плохая погода.
+    - Здравствуйте! Мне нужен номер на 1 ночь.
+    - Добрый день! Вы бронировали заранее? - К сожалению, нет. У вас есть свободные номера?
+    - Одну минуточку, пожалуйста. У нас есть номер superior. Цена за сутки 60$.
+    - А что на счёт завтрака? - Вы можете оплатить его отдельно за 9$.
+    - Хорошо, меня устраивает. Я забронирую этот номер и завтрак.
+    - Как будете оплачивать, наличными или картой? - Дебетовой картой, пожалуйста.
+    - Вот платежный терминал.
     """,
-    ("Алина приехала в новый город",
+    ("Здравствуйте! Мне нужен номер на 1 ночь",
     [
-        "Alina came to a new city",
-        "Alina have come to a new city",
-        "Alina've come to a new city"
-    ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>come</u></b> |"}),
-    ("На улице было очень холодно",
-    [
-        "It was very cold outside",
-        "It was really cold outside"
-    ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>outside</u></b> |"}),
-    ("На улице идёт дождь, тебе следует взять зонт",
-    [
-        "It's raining outside, you should take an umbrella",
-        "It is raining outside, you should take an umbrella"
-    ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>should</u></b> |"}),
-    ("У нас закончился хлеб, нам нужно найти магазин",
-    [
-        "We ran out of bread, we need to find a shop",
-        "We've run out of bread, we need to find a shop",
-        "We have run out of bread, we need to find a shop",
-        "We ran out of bread, we need to find a store"
-    ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>run out of, need to</u></b> |"}),
-    ("Сегодня мы собираемся выйти погулять, потому что на улице тепло",
-    [
-        "Today we are going to go out because it's warm outside",
-        "Today we are planning to go out because it's warm outside",
-        "Today we're going to go out because it's warm outside",
-        "Today we're planning to go out because it's warm outside"
-    ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>go out</u></b> |"}),
-    ("В автобусах есть специальные сиденья для беременных женщин",
-    [
-        "There are special seats for pregnant women in buses"
-        "Buses have special seats for pregnant women",
-        "There are special seats in buses for pregnant women",
+        "Hello! I need a room for a night",
+        "Hello! I require a room for a night",
+        "Hello! I need a room for one night",
+        "Hello! I require a room for one night",
     ]),
-    ("Этот футбольный матч довольно скучный",
+    ("Добрый день! Вы бронировали заранее?",
     [
-        "This football match is pretty boring",
-        "This football match is quite boring",
-        "This football match is rather boring",
-        "This football match is fairly boring",
-        "This soccer match is pretty boring",
-        "This soccer match is quite boring",
-        "This soccer match is rather boring",
-        "This soccer match is fairly boring",
-        "This football game is pretty boring",
-        "This football game is quite boring",
-        "This football game is rather boring",
-        "This football game is fairly boring",
-        "This soccer game is pretty boring",
-        "This soccer game is quite boring",
-        "This soccer game is rather boring",
-        "This soccer game is fairly boring"
-    ]),
-    ("Моей жене нужны новые брюки",
-    [
-        "My wife needs new pants",
-        "My wife needs new trousers",
-        "My wife requires new pants",
-        "My wife requires new trousers"
-    ]),
-    ("Мне кажется, завтра будет плохая погода",
-    [
-        "It seems to me that tomorrow will be bad weather",
-        "It seems to me tomorrow will be bad weather",
-        "It seems tomorrow will be bad weather",
-        "It seems that tomorrow will be bad weather"
+        "Good day! Did you book in advance?",
+        "Good afternoon! Did you book in advance?",
+        "Good day! Have you booked in advance?",
+        "Good afternoon! Have you booked in advance?",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to seem</u></b> |"}),
-    ("Дядя Федя очень высокий",
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>in advance</u></b> |"}),
+    ("К сожалению, нет. У вас есть свободные номера?",
     [
-        "Uncle Fediya is very tall",
-        "Uncle Fediya is really tall",
-        "Uncle Fediya's very tall",
-        "Uncle Fediya's really tall"
+        "Unfortunately, no. Do you have free rooms?",
+        "Unfortunately, no. Have you got free rooms?",
+        "No, unfortunately. Do you have free rooms?",
+        "No, unfortunately. Have you got free rooms?",
+    ]),
+    ("Одну минуточку, пожалуйста. У нас есть номер superior. Цена за ночь 60$",
+    [
+        "One minute, please. We have a superior room. The price is 60$ per night",
+        "One minute, please. We have got a superior room. The price is 60$ per night",
+        "One minute, please. We have got a superior room. The price is 60$ for one night",
+        "One minute, please. We have got a superior room. The price is 60$ for one night",
+        "One minute, please. We have got a superior room. The price's 60$ per night",
+        "One minute, please. We have got a superior room. The price's 60$ for a night",
+        "One minute, please. We have got a superior room. The price's 60$ for one night",
+        "One minute, please. We've got a superior room. The price is 60$ per night",
+        "One minute, please. We've got a superior room. The price is 60$ per night",
+        "One minute, please. We've got a superior room. The price is 60$ for one night",
+        "One minute, please. We've got a superior room. The price is 60$ for one night",
+        "One minute, please. We've got a superior room. The price's 60$ per night",
+        "One minute, please. We've got a superior room. The price's 60$ for a night",
+        "One minute, please. We've got a superior room. The price's 60$ for one night",
+        "A minute, please. We have a superior room. The price is 60$ per night",
+        "A minute, please. We have got a superior room. The price is 60$ per night",
+        "A minute, please. We have got a superior room. The price is 60$ for one night",
+        "A minute, please. We have got a superior room. The price is 60$ for one night",
+        "A minute, please. We have got a superior room. The price's 60$ per night",
+        "A minute, please. We have got a superior room. The price's 60$ for a night",
+        "A minute, please. We have got a superior room. The price's 60$ for one night",
+        "A minute, please. We've got a superior room. The price is 60$ per night",
+        "A minute, please. We've got a superior room. The price is 60$ per night",
+        "A minute, please. We've got a superior room. The price is 60$ for one night",
+        "A minute, please. We've got a superior room. The price is 60$ for one night",
+        "A minute, please. We've got a superior room. The price's 60$ per night",
+        "A minute, please. We've got a superior room. The price's 60$ for a night",
+        "A minute, please. We've got a superior room. The price's 60$ for one night",
+        "A minute, please. We have a superior room. The price is 60$ per night",
+    ]),
+    ("А что на счёт завтрака?",
+    [
+        "And what about breakfast?"
+    ]),
+    ("Вы можете оплатить его отдельно за 9$",
+    [
+        "You can pay for it separately",
+        "You may pay for it separately",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>Fediya</u></b> |"}),
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>separately</u></b> |"}),
+    ("Хорошо, меня устраивает. Я забронирую этот номер и завтрак",
+    [
+        "Good, it suits me. I will book this room and a breakfast",
+        "Good, that suits me. I will book this room and a breakfast",
+        "Good, I like it. I will book this room and a breakfast",
+        "Fine, it suits me. I will book this room and a breakfast",
+        "Fine, that suits me. I will book this room and a breakfast",
+        "Fine, I like it. I will book this room and a breakfast",
+        "Good, it suits me. I'll book this room and a breakfast",
+        "Good, that suits me. I'll book this room and a breakfast",
+        "Good, I like it. I'll book this room and a breakfast",
+        "Fine, it suits me. I'll book this room and a breakfast",
+        "Fine, that suits me. I'll book this room and a breakfast",
+        "Fine, I like it. I'll book this room and a breakfast"
+    ]),
+    ("Как будете оплачивать, наличными или картой?",
+    [
+        "How will you pay, by cash or by card",
+        "How will you pay, with cash or by card",
+        "How will you pay, with cash or with card",
+        "How will you pay, by cash or with card",
+        "How are you goint to you pay, by cash or by card",
+        "How are you goint to pay, with cash or by card",
+        "How are you goint to pay, with cash or with card",
+        "How are you gonna pay, by cash or by card",
+        "How are you gonna pay, with cash or by card",
+        "How are you gonna pay, with cash or with card",
+        "How are you gonna pay, by cash or with card",
+    ]),
+    ("Дебетовой картой, пожалуйста",
+    [
+        "By debit card, please",
+        "Withy debit card, please",
+        "Debit card, please"
+    ]),
+    ("Вот платежный терминал",
+    [
+        "Here is the payment terminal",
+        "Here's the payment terminal"
+    ])
 ]
+
+
+
 
 
 topic_easy2 = [
     """
-    Доброе утро! Мне нужны свежие овощи.
-    Доброе утро! Выбирайте, что понравится, все овощи у меня свежие.
-    Тогда я возьму 2 килограмма помидоров и 2 киллограмма огурцов, и 3 перца.
-    Возьмите еще морковь, она очень сладкая. Хорошо, вы уговорили меня, положите еще одну морковь.
-    С вас 8 долларов. Где я могу купить яблоки?
-    Пройдите прямо, а затем поверните направо после лавки с зеленью, там будут фрукты.
-    Спасибо огромное! Хорошего дня! Спасибо!
+    Я очень устала, но так хочу есть! 
+    Давай закажем пиццу прямо в отель.
+    Хорошая идея! Я хочу, чтобы она была с грибами, а еще много сыра.
+    Здравствуйте! Можно заказать пиццу в отель?
+    Добрый день! Скажите, пожалуйста, ваш адрес, я проверю, доставляем ли мы туда. - Ул. Зеленая, д. 11.
+    Да, мы сможем осуществить доставку за 30 минут. Какую пиццу вы бы хотели?
+    Я бы хотела в ней побольше сыра и грибов.
+    Я могу вам предложить пиццу «фермерская». В ней будут, курица, грибы, томаты и сыр пармезан.
+    Отлично! Нам подходит!
+    Ожидайте пиццу через полчаса. Приятного аппетита!
     """,
-    ("Доброе утро! Мне нужны свежие овощи",
+    ("Я очень устала, но так хочу есть!",
     [
-        "Good morning! I need fresh vegetables",
-        "Good morning! I require fresh vegetables"
+        "I'm exhausted but I want to eat so much!",
+        "I am exhausted but I want to eat so much!",
+        "I'm exhausted but I want to eat very much!",
+        "I'm exhausted but I want to eat so much!",
+        "I'm exhausted but I wanna eat so much!",
+        "I am exhausted but I wanna eat so much!",
+        "I'm exhausted but I wanna eat very much!",
+        "I'm exhausted but I wanna eat so much!",
+        "I'm exhausted but I want to eat so much!",
+        "I am exhausted but I want to eat so much!",
+        "I'm exhausted but I want to eat very much!",
+        "I'm exhausted but I want to eat so much!",
+        "I'm exhausted but I wanna eat so much!",
+        "I am exhausted but I wanna eat so much!",
+        "I'm exhausted but I wanna eat very much!",
+        "I'm exhausted but I wanna eat so much!"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>be exhausted</u></b> |"}),
+    ("Давай закажем пиццу прямо в отель",
+    [
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let's order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel",
+        "Let us order a pizza right into the hotel"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>right into</u></b> |"}),
+    ("Хорошая идея! Я хочу, чтобы она была с грибами, а еще много сыра",
+    [
+        "Nice/good idea. I want it to be with with mushrooms and also with a lot of (much) cheese",
+        "Good idea! I wish it to be with mushrooms and also with a lot of cheese",
+        "Nice idea! I wish it to be with mushrooms and also with a lot of cheese",
+        "Good idea! I wish it to be with mushrooms and also with lots cheese",
+        "Nice idea! I wish it to be with mushrooms and also with lots cheese",
+        "Good idea! I wish it to be with mushrooms and also with much cheese",
+        "Nice idea! I wish it to be with mushrooms and also with much cheese",
+        "Good idea! I wish it to be with mushrooms and with a lot of cheese as well",
+        "Nice idea! I wish it to be with mushrooms and with a lot of cheese as well",
+        "Good idea! I wish it to be with mushrooms and with lots cheese as well",
+        "Nice idea! I wish it to be with mushrooms and with lots cheese as well",
+        "Good idea! I wish it to be with mushrooms and with much cheese as well",
+        "Nice idea! I wish it to be with mushrooms and with much cheese as well"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to wish</u></b> |"}),
+    ("Здравствуйте! Можно заказать пиццу в отель?",
+    [
+        "Hello! Can I order a pizza to a hotel?",
+        "Hello! Can I order a pizza into a hotel?"
     ]),
-    ("Доброе утро! Выбирайте, что понравится, все овощи у меня свежие",
+    ("Добрый день! Скажите, пожалуйста, ваш адрес, я проверю, доставляем ли мы туда. - Ул. Зеленая, д. 11",
     [
-        "Good morning! Choose whatever you like, all my vegetables are fresh",
-        "Good morning! Choose whatever you like, I have only fresh vegetables",
-        "Good morning! Choose whatever you like, I've got only fresh vegetables",
-        "Good morning! Choose whatever you like, I have got only fresh vegetables",
-        "Good morning! Choose whichever you like, all my vegetables are fresh",
-        "Good morning! Choose whichever you like, I have only fresh vegetables",
-        "Good morning! Choose whichever you like, I've got only fresh vegetables",
-        "Good morning! Choose whichever you like, I have got only fresh vegetables",
-        "Good morning! Choose what you like, all my vegetables are fresh",
-        "Good morning! Choose what you like, I have only fresh vegetables",
-        "Good morning! Choose what you like, I've got only fresh vegetables",
-        "Good morning! Choose what you like, I have got only fresh vegetables",
-        "Good morning! Choose whatever you fancy, all my vegetables are fresh",
-        "Good morning! Choose whatever you fancy, I have only fresh vegetables",
-        "Good morning! Choose whatever you fancy, I've got only fresh vegetables",
-        "Good morning! Choose whatever you fancy, I have got only fresh vegetables",
-        "Good morning! Choose whichever you fancy, all my vegetables are fresh",
-        "Good morning! Choose whichever you fancy, I have only fresh vegetables",
-        "Good morning! Choose whichever you fancy, I've got only fresh vegetables",
-        "Good morning! Choose whichever you fancy, I have got only fresh vegetables",
-        "Good morning! Choose what you fancy, all my vegetables are fresh",
-        "Good morning! Choose what you fancy, I have only fresh vegetables",
-        "Good morning! Choose what you fancy, I've got only fresh vegetables",
-        "Good morning! Choose what you fancy, I have got only fresh vegetables",
-        "Good morning! Pick whatever you like, all my vegetables are fresh",
-        "Good morning! Pick whatever you like, I have only fresh vegetables",
-        "Good morning! Pick whatever you like, I've got only fresh vegetables",
-        "Good morning! Pick whatever you like, I have got only fresh vegetables",
-        "Good morning! Pick whichever you like, all my vegetables are fresh",
-        "Good morning! Pick whichever you like, I have only fresh vegetables",
-        "Good morning! Pick whichever you like, I've got only fresh vegetables",
-        "Good morning! Pick whichever you like, I have got only fresh vegetables",
-        "Good morning! Pick what you like, all my vegetables are fresh",
-        "Good morning! Pick what you like, I have only fresh vegetables",
-        "Good morning! Pick what you like, I've got only fresh vegetables",
-        "Good morning! Pick what you like, I have got only fresh vegetables",
-        "Good morning! Pick whatever you fancy, all my vegetables are fresh",
-        "Good morning! Pick whatever you fancy, I have only fresh vegetables",
-        "Good morning! Pick whatever you fancy, I've got only fresh vegetables",
-        "Good morning! Pick whatever you fancy, I have got only fresh vegetables",
-        "Good morning! Pick whichever you fancy, all my vegetables are fresh",
-        "Good morning! Pick whichever you fancy, I have only fresh vegetables",
-        "Good morning! Pick whichever you fancy, I've got only fresh vegetables",
-        "Good morning! Pick whichever you fancy, I have got only fresh vegetables",
-        "Good morning! Pick what you fancy, all my vegetables are fresh",
-        "Good morning! Pick what you fancy, I have only fresh vegetables",
-        "Good morning! Pick what you fancy, I've got only fresh vegetables",
-        "Good morning! Pick what you fancy, I have got only fresh vegetables",
+        "Good day! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
+        "Good afternoon! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
+        "Good day! Tell me, please, your address, I will check if we deliver there. - Green street, 11",
+        "Good afternoon! Tell me, please, your address, I will check if we deliver there. - Green street, 11",
+        "Good day! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
+        "Good afternoon! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
+        "Good day! Tell me, please, your address, I will check if we deliver there. - Green street, 11",
+        "Good afternoon! Tell me, please, your address, I will check if we deliver there. - Green street, 11"
     ]),
-    ("Тогда я возьму 2 килограмма помидоров и 2 киллограмма огурцов, и 3 перца",
+    ("Да, мы сможем осуществить доставку за 30 минут. Какую пиццу вы бы хотели?",
     [
-        "In that case I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "In this case I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "In that case I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "In this case I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "Then I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "Then I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "Then I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
-        "Then I will take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers"
+        "Yes, we (will be able to) can deliver in 30 minutes. What kind/type of pizza would you like?",
+        "Yes, we can deliver in 30 minutes. What kind of pizza would you like?",
+        "Yes, we will be able to deliver in 30 minutes. What kind of pizza would you like?",
+        "Yes, we'll be able to deliver in 30 minutes. What kind of pizza would you like?",
+        "Yes, we can deliver in 30 minutes. What type of pizza would you like?",
+        "Yes, we will be able to deliver in 30 minutes. What type of pizza would you like?",
+        "Yes, we'll be able to deliver in 30 minutes. What type of pizza would you like?"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>would</u></b> |"}),
+    ("Я бы хотела в ней побольше сыра и грибов",
+    [
+        "I would like it to have more cheese and mushrooms",
+        "I'd like it to have more cheese and mushrooms",
+        "I would like more cheese and mushrooms in it",
+        "I'd like more cheese and mushrooms in it"
     ]),
-    ("Возьмите еще морковь, она очень сладкая",
+    ("Я могу вам предложить пиццу «фермерская». В ней будут, курица, грибы, томаты и сыр пармезан",
     [
-        "Take carrot as well, it is very sweet",
-        "Take carrot as well, it's very sweet",
-        "Take carrot as well, it is really sweet",
-        "Take carrot as well, it's really sweet",
-        "Take also carrot, it is very sweet",
-        "Take also carrot, it's very sweet",
-        "Take also carrot, it is really sweet",
-        "Take also carrot, it's really sweet",
+        "I can offer you farmer's pizza. It will have chicken, mushrooms, tomatoes and parmesan cheese",
+        "I can offer you farmer's pizza. It will have chicken, mushrooms, tomatoes and parmesan cheese in it"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>offer, farmer's pizza</u></b> |"}),
+    ("Отлично! Нам подходит!",
+    [
+        "Great! It suits us!",
+        "Fine! It suits us!",
+        "Splendid! It suits us!"
     ]),
-    ("Хорошо, вы уговорили меня, положите еще одну морковь",
+    ("Ожидайте пиццу через полчаса. Приятного аппетита!",
     [
-        "Ok, you convinced me, put also one carrot",
-        "Ok, you convinced me, put also a carrot",
-        "alright, you convinced me, put also one carrot",
-        "alright, you convinced me, put also a carrot",
-        "Ok, you've convinced me, put also one carrot",
-        "Ok, you've convinced me, put also a carrot",
-        "alright, you've convinced me, put also one carrot",
-        "alright, you've convinced me, put also a carrot",
-        "Ok, you have convinced me, put also one carrot",
-        "Ok, you have convinced me, put also a carrot",
-        "alright, you have convinced me, put also one carrot",
-        "alright, you have convinced me, put also a carrot",
-    ]),
-    ("С вас 8 долларов",
-    [
-        "That'll be 8 dollars from you",
-        "That will be 8 dollars from you"
-        "That'll be 8 dollars",
-        "That will be 8 dollars",
-        "It'll be 8 dollars from you",
-        "It will be 8 dollars from you"
-        "It'll be 8 dollars",
-        "It will be 8 dollars",
-    ]),
-    ("Где я могу купить яблоки?",
-    [
-        "Where can I buy apples?",
-        "Where can I purchase apples?",
-        "Where could I buy apples?",
-        "Where could I purchase apples?"
-    ]),
-    ("Пройдите прямо, а затем поверните направо после лавки с зеленью, там будут фрукты",
-    [
-        "Go straight and then turn right after a greenery stall, there'll be fruit",
-        "Go ahead and then turn right after a greenery stall, there'll be fruit",
-        "Go straight ahead and then turn right after a greenery stall, there'll be fruit",
-        "Go forward and then turn right after a greenery stall, there'll be fruit",
-        "Go straight forward and then turn right after a greenery stall, there'll be fruit",
-        "Go straight and then turn right beyond a greenery stall, there'll be fruit",
-        "Go ahead and then turn right beyond a greenery stall, there'll be fruit",
-        "Go straight ahead and then turn right beyond a greenery stall, there'll be fruit",
-        "Go forward and then turn right beyond a greenery stall, there'll be fruit",
-        "Go straight forward and then turn right beyond a greenery stall, there'll be fruit",
-        "Go straight and then turn right after a greenery stall, there'll be fruits",
-        "Go ahead and then turn right after a greenery stall, there'll be fruits",
-        "Go straight ahead and then turn right after a greenery stall, there'll be fruits",
-        "Go forward and then turn right after a greenery stall, there'll be fruits",
-        "Go straight forward and then turn right after a greenery stall, there'll be fruits",
-        "Go straight and then turn right beyond a greenery stall, there'll be fruist",
-        "Go ahead and then turn right beyond a greenery stall, there'll be fruits",
-        "Go straight ahead and then turn right beyond a greenery stall, there'll be fruits",
-        "Go forward and then turn right beyond a greenery stall, there'll be fruits",
-        "Go straight forward and then turn right beyond a greenery stall, there'll be fruits",
-        "Go straight and then turn right after a greenery stall, there will be fruit",
-        "Go ahead and then turn right after a greenery stall, there will be fruit",
-        "Go straight ahead and then turn right after a greenery stall, there will be fruit",
-        "Go forward and then turn right after a greenery stall, there will be fruit",
-        "Go straight forward and then turn right after a greenery stall, there will be fruit",
-        "Go straight and then turn right beyond a greenery stall, there will be fruit",
-        "Go ahead and then turn right beyond a greenery stall, there will be fruit",
-        "Go straight ahead and then turn right beyond a greenery stall, there will be fruit",
-        "Go forward and then turn right beyond a greenery stall, there will be fruit",
-        "Go straight forward and then turn right beyond a greenery stall, there will be fruit",
-        "Go straight and then turn right after a greenery stall, there will be fruits",
-        "Go ahead and then turn right after a greenery stall, there will be fruits",
-        "Go straight ahead and then turn right after a greenery stall, there will be fruits",
-        "Go forward and then turn right after a greenery stall, there will be fruits",
-        "Go straight forward and then turn right after a greenery stall, there will be fruits",
-        "Go straight and then turn right beyond a greenery stall, there will be fruist",
-        "Go ahead and then turn right beyond a greenery stall, there will be fruits",
-        "Go straight ahead and then turn right beyond a greenery stall, there will be fruits",
-        "Go forward and then turn right beyond a greenery stall, there will be fruits",
-        "Go straight forward and then turn right beyond a greenery stall, there will be fruits",
-        "Go straight and then turn right after a greenery shop, there'll be fruit",
-        "Go ahead and then turn right after a greenery shop, there'll be fruit",
-        "Go straight ahead and then turn right after a greenery shop, there'll be fruit",
-        "Go forward and then turn right after a greenery shop, there'll be fruit",
-        "Go straight forward and then turn right after a greenery shop, there'll be fruit",
-        "Go straight and then turn right beyond a greenery shop, there'll be fruit",
-        "Go ahead and then turn right beyond a greenery shop, there'll be fruit",
-        "Go straight ahead and then turn right beyond a greenery shop, there'll be fruit",
-        "Go forward and then turn right beyond a greenery shop, there'll be fruit",
-        "Go straight forward and then turn right beyond a greenery shop, there'll be fruit",
-        "Go straight and then turn right after a greenery shop, there'll be fruits",
-        "Go ahead and then turn right after a greenery shop, there'll be fruits",
-        "Go straight ahead and then turn right after a greenery shop, there'll be fruits",
-        "Go forward and then turn right after a greenery shop, there'll be fruits",
-        "Go straight forward and then turn right after a greenery shop, there'll be fruits",
-        "Go straight and then turn right beyond a greenery shop, there'll be fruist",
-        "Go ahead and then turn right beyond a greenery shop, there'll be fruits",
-        "Go straight ahead and then turn right beyond a greenery shop, there'll be fruits",
-        "Go forward and then turn right beyond a greenery shop, there'll be fruits",
-        "Go straight forward and then turn right beyond a greenery shop, there'll be fruits",
-        "Go straight and then turn right after a greenery shop, there will be fruit",
-        "Go ahead and then turn right after a greenery shop, there will be fruit",
-        "Go straight ahead and then turn right after a greenery shop, there will be fruit",
-        "Go forward and then turn right after a greenery shop, there will be fruit",
-        "Go straight forward and then turn right after a greenery shop, there will be fruit",
-        "Go straight and then turn right beyond a greenery shop, there will be fruit",
-        "Go ahead and then turn right beyond a greenery shop, there will be fruit",
-        "Go straight ahead and then turn right beyond a greenery shop, there will be fruit",
-        "Go forward and then turn right beyond a greenery shop, there will be fruit",
-        "Go straight forward and then turn right beyond a greenery shop, there will be fruit",
-        "Go straight and then turn right after a greenery shop, there will be fruits",
-        "Go ahead and then turn right after a greenery shop, there will be fruits",
-        "Go straight ahead and then turn right after a greenery shop, there will be fruits",
-        "Go forward and then turn right after a greenery shop, there will be fruits",
-        "Go straight forward and then turn right after a greenery shop, there will be fruits",
-        "Go straight and then turn right beyond a greenery shop, there will be fruist",
-        "Go ahead and then turn right beyond a greenery shop, there will be fruits",
-        "Go straight ahead and then turn right beyond a greenery shop, there will be fruits",
-        "Go forward and then turn right beyond a greenery shop, there will be fruits",
-        "Go straight forward and then turn right beyond a greenery shop, there will be fruits",
-    ]),
-    ("Спасибо огромное! Хорошего дня!",
-    [
-        "Thanks a lot! Have a nice day!",
-        "Thank you so much! Have a nice day!",
-        "Thank you very much! Have a nice day!"
-    ]),
-    ("Спасибо!",
-    [
-        "Thanks!",
-        "Thank you!"
+        "Expect pizza in half an hour. Have a nice meal(enjoy your meal/food)!",
+        "Expect pizza in 30 minutes. Enjoy your meal!",
+        "Expect pizza in half an hour. Have a nice meal!",
+        "Expect pizza in 30 minutes. Have a nice meal!",
+        "Expect pizza in 30 minutes. Enjoy your food!",
+        "Expect pizza in half an hour. Enjoy your food!",
     ])
 ]
+
+
+
+
+
+# topic_easy3 = 

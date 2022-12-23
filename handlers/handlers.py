@@ -35,7 +35,7 @@ async def cmd_cancel(message: types.Message, state: FSMContext):
     if current_state is None:
         return
     await state.finish()
-    await message.answer('Вы вышли из теста.', reply_markup=kbsbcb)
+    await message.answer('<b>Вы вышли из теста.</b>', reply_markup=kbsbcb)
 
 
 @dp.message_handler(commands=['низкий', 'средний', 'высокий'], state=States.level)
