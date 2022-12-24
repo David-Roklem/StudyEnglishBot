@@ -1,3 +1,6 @@
+from aiogram.utils.markdown import hlink
+
+
 # First element of the list is a whole text
 topic_easy1 = [
     """
@@ -228,7 +231,7 @@ topic_easy2 = [
         "I can offer you farmer's pizza. It will have chicken, mushrooms, tomatoes and parmesan cheese",
         "I can offer you farmer's pizza. It will have chicken, mushrooms, tomatoes and parmesan cheese in it"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>offer, farmer's pizza</u></b> |"}),
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer, farmer's pizza</u></b> |"}),
     ("Отлично! Нам подходит!",
     [
         "Great! It suits us!",
@@ -250,4 +253,99 @@ topic_easy2 = [
 
 
 
-# topic_easy3 = 
+topic_easy3 = [
+    """
+    - Добрый день! У меня с утра болит голова. Что вы можете мне предложить?
+    - Здравствуйте! Вы мерили ваше давление? - Нет, у меня нет возможности.
+    - Вы можете это сделать у нас в аптеке. - Пожалуйста, присядьте здесь и протяните мне правую руку.
+    - Ваше давление в норме. Без рецепта врача могу вам предложить «ибупрофен».
+    - Я раньше никогда не принимала его. - Это хорошее лекарство и оно поможет вам в течение 15 минут.
+    - Можно мне еще бутылку воды. - Конечно! Все вместе вышло на сумму 2 доллара 80
+    - Вот, возьмите. - Вот ваше лекарство. Не болейте!
+    """,
+    ("Добрый день! У меня с утра болит голова. Что вы можете мне предложить?",
+    [
+        "Good afternoon! I have a headache from the morning. What can you offer?",
+        "Good afternoon! I have got a headache from the morning. What can you offer?",
+        "Good afternoon! I've got a headache from the morning. What can you offer?",
+        "Good afternoon! I have a headache since the morning. What can you offer?",
+        "Good afternoon! I have got a headache since the morning. What can you offer?",
+        "Good afternoon! I've got a headache since the morning. What can you offer?",
+        "Good afternoon! I have a headache since morning. What can you offer?",
+        "Good afternoon! I have got a headache since morning. What can you offer?",
+        "Good afternoon! I've got a headache since morning. What can you offer?",
+        "Good day! I have a headache from the morning. What can you offer?",
+        "Good day! I have got a headache from the morning. What can you offer?",
+        "Good day! I've got a headache from the morning. What can you offer?",
+        "Good day! I have a headache since the morning. What can you offer?",
+        "Good day! I have got a headache since the morning. What can you offer?",
+        "Good day! I've got a headache since the morning. What can you offer?",
+        "Good day! I have a headache since morning. What can you offer?",
+        "Good day! I have got a headache since morning. What can you offer?",
+        "Good day! I've got a headache since morning. What can you offer?",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer</u></b> |"}),
+    ("Здравствуйте! Вы мерили ваше давление?",
+    [
+        "Hello! Did you measure your blood pressure",
+        "Good afternoon! Did you measure your blood pressure",
+        "Hello! Have you measured your blood pressure",
+        "Good afternoon! Have you measured your blood pressure",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>blood pressure</u></b> |"}),
+    ("Нет, у меня нет возможности",
+    [
+        "No, I don't have an opportunity",
+        "No, I do not have an opportunity",
+        "No, I have no opportunity"
+    ]),
+    ("Вы можете это сделать у нас в аптеке",
+    [
+        "You can do it here at our pharmacy",
+        "You can do it here in our pharmacy",
+        "You may do it here at our pharmacy",
+        "You may do it here in our pharmacy",
+        "You can do it here at our drugstore",
+        "You can do it here in our drugstore",
+        "You may do it here at our drugstore",
+        "You may do it here in our drugstore",
+        "You can do it here at our apothecary",
+        "You can do it here in our apothecary",
+        "You may do it here at our apothecary",
+        "You may do it here in our apothecary",
+        "You can do it here at our chemist's shop",
+        "You can do it here in our chemist's shop",
+        "You may do it here at our chemist's shop",
+        "You may do it here in our chemist's shop",
+    ]),
+    ("Пожалуйста, присядьте здесь и протяните мне правую руку",
+    [
+        "Please, sit down here and give me your right arm",
+        "Please, sit here and give me your right arm",
+        "Please, sit over here and give me your right arm",
+        "Please, sit down here and give me the right arm",
+        "Please, sit here and give me the right arm",
+        "Please, sit over here and give me the right arm",
+    ],
+    {"hint": hlink("Разница между hand и arm", "http://surl.li/eeamc")}),
+    ("А",
+    [
+        "A"
+    ]),
+    ("б",
+    [
+        "b"
+    ]),
+    ("Л",
+    [
+        "l"
+    ]),
+    ("о",
+    [
+        "o"
+    ]),
+    ("ф",
+    [
+        "f"
+    ])
+]

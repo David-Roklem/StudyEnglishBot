@@ -78,8 +78,9 @@ async def determine_topic_and_show_first_question(message: types.Message, state:
 async def begin_learning(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         await message.answer(f"1️⃣ {data['module'][1][0]}", reply_markup=ReplyKeyboardRemove())
-        if len(data['module'][1]) == 3:
-            await message.answer(f"{data['module'][1][2]['hint']}", reply_markup=kccb)
+        await message.answer(data['module'][1][2].get('hint'))
+        # if len(data['module'][1]) == 3:
+        #     await message.answer(f"{data['module'][1][2]['hint']}", reply_markup=kccb)
     await States.next()
 
 
