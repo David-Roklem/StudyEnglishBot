@@ -255,97 +255,118 @@ topic_easy2 = [
 
 topic_easy3 = [
     """
-    - Добрый день! У меня с утра болит голова. Что вы можете мне предложить?
-    - Здравствуйте! Вы мерили ваше давление? - Нет, у меня нет возможности.
-    - Вы можете это сделать у нас в аптеке. - Пожалуйста, присядьте здесь и протяните мне правую руку.
-    - Ваше давление в норме. Без рецепта врача могу вам предложить «ибупрофен».
-    - Я раньше никогда не принимала его. - Это хорошее лекарство и оно поможет вам в течение 15 минут.
-    - Можно мне еще бутылку воды. - Конечно! Все вместе вышло на сумму 2 доллара 80
-    - Вот, возьмите. - Вот ваше лекарство. Не болейте!
+    - Анна, ты уже нарядила свою ёлку? - Нет. Я в этом году лечу к родителям. Меня не будет целый месяц.
+    - Однако они об этом не знают. Я готовлю сюрприз. - Здорово! Расскажи поподробнее об этом.
+    - Я переоденусь в Деда Мороза и приду с подарками. - Что ты им купила?
+    - Маме и сестре я везу перчатки, а папе - шарф. - Где они проживают?
+    - Они живут в Сочи. Но я планирую снять домик в горах для всей семьи.
+    - Здорово! Я желаю вам хорошего отдыха и счастливого Рождества!
     """,
-    ("Добрый день! У меня с утра болит голова. Что вы можете мне предложить?",
+    ("Анна, ты уже нарядила свою ёлку?",
     [
-        "Good afternoon! I have a headache from the morning. What can you offer?",
-        "Good afternoon! I have got a headache from the morning. What can you offer?",
-        "Good afternoon! I've got a headache from the morning. What can you offer?",
-        "Good afternoon! I have a headache since the morning. What can you offer?",
-        "Good afternoon! I have got a headache since the morning. What can you offer?",
-        "Good afternoon! I've got a headache since the morning. What can you offer?",
-        "Good afternoon! I have a headache since morning. What can you offer?",
-        "Good afternoon! I have got a headache since morning. What can you offer?",
-        "Good afternoon! I've got a headache since morning. What can you offer?",
-        "Good day! I have a headache from the morning. What can you offer?",
-        "Good day! I have got a headache from the morning. What can you offer?",
-        "Good day! I've got a headache from the morning. What can you offer?",
-        "Good day! I have a headache since the morning. What can you offer?",
-        "Good day! I have got a headache since the morning. What can you offer?",
-        "Good day! I've got a headache since the morning. What can you offer?",
-        "Good day! I have a headache since morning. What can you offer?",
-        "Good day! I have got a headache since morning. What can you offer?",
-        "Good day! I've got a headache since morning. What can you offer?",
+        "Anna, did you decorate your Christmas tree",
+        "Anna, have you decorated your Christmas tree",
+        "Anna, did you dress uo your Christmas tree",
+        "Anna, have you dressed up your Christmas tree"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer</u></b> |"}),
-    ("Здравствуйте! Вы мерили ваше давление?",
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>Christmas tree</u></b> |"}),
+    ("Нет. Я в этом году лечу к родителям. Меня не будет целый месяц",
     [
-        "Hello! Did you measure your blood pressure",
-        "Good afternoon! Did you measure your blood pressure",
-        "Hello! Have you measured your blood pressure",
-        "Good afternoon! Have you measured your blood pressure",
+        "No. I am flying to my parents this year. I am going to be away for a whole month",
+        "No. I'm flying to my parents this year. I am going to be away for a whole month",
+        "No. I'm flying to my parents this year. I'm going to be away for a whole month",
+        "No. I am flying to my parents this year. I'm going to be away for a whole month",
+        "No. I am flying to my parents this year. I will be gone for a whole month",
+        "No. I'm flying to my parents this year. I'll be gone for a whole month",
+        "No. I'm flying to my parents this year. I will be gone for a whole month",
+        "No. This year I am flying to my parents. I am going to be away for a whole month",
+        "No. This year I am flying to my parents. I'll be gone for a whole month",
+        "No. This year I'm flying to my parents. I am going to be away for a whole month",
+        "No. This year I'm flying to my parents. I'm going to be away for a whole month",
+        "No. This year I am flying to my parents. I'm going to be away for a whole month",
+        "No. This year I am flying to my parents. I will be gone for a whole month",
+        "No. This year I'm flying to my parents. I'll be gone for a whole month",
+        "No. This year I'm flying to my parents. I will be gone for a whole month",
+        "No. This year I am flying to my parents. I'll be gone for a whole month",
+    ]),
+    ("Однако они об этом не знают. Я готовлю сюрприз",
+    [
+        "However they do not know about that. I am preparing a surprise",
+        "However they don't know about that. I am preparing a surprise",
+        "However they don't know about that. I'm preparing a surprise",
+        "However they do not know about that. I'm preparing a surprise",
+        "However they do not know about it. I am preparing a surprise",
+        "However they don't know about it. I am preparing a surprise",
+        "However they don't know about it. I'm preparing a surprise",
+        "However they do not know about it. I'm preparing a surprise",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>blood pressure</u></b> |"}),
-    ("Нет, у меня нет возможности",
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>However</u></b> |"}),
+    ("Здорово! Расскажи поподробнее об этом",
     [
-        "No, I don't have an opportunity",
-        "No, I do not have an opportunity",
-        "No, I have no opportunity"
-    ]),
-    ("Вы можете это сделать у нас в аптеке",
-    [
-        "You can do it here at our pharmacy",
-        "You can do it here in our pharmacy",
-        "You may do it here at our pharmacy",
-        "You may do it here in our pharmacy",
-        "You can do it here at our drugstore",
-        "You can do it here in our drugstore",
-        "You may do it here at our drugstore",
-        "You may do it here in our drugstore",
-        "You can do it here at our apothecary",
-        "You can do it here in our apothecary",
-        "You may do it here at our apothecary",
-        "You may do it here in our apothecary",
-        "You can do it here at our chemist's shop",
-        "You can do it here in our chemist's shop",
-        "You may do it here at our chemist's shop",
-        "You may do it here in our chemist's shop",
-    ]),
-    ("Пожалуйста, присядьте здесь и протяните мне правую руку",
-    [
-        "Please, sit down here and give me your right arm",
-        "Please, sit here and give me your right arm",
-        "Please, sit over here and give me your right arm",
-        "Please, sit down here and give me the right arm",
-        "Please, sit here and give me the right arm",
-        "Please, sit over here and give me the right arm",
+        "Awesome. Tell me more about it"
     ],
-    {"hint": hlink("Разница между hand и arm", "http://surl.li/eeamc")}),
-    ("А",
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>awesome</u></b> |"}),
+    ("Я переоденусь в Деда Мороза и приду с подарками",
     [
-        "A"
+        "I will dress up as Father Christmas and come with presents",
+        "I will dress up as Father Christmas and come with gifts",
+        "I'll dress up as Father Christmas and come with presents",
+        "I'll dress up as Father Christmas and come with gifts",
+        "I will dress up as Father Christmas and will come with presents",
+        "I will dress up as Father Christmas and will come with gifts",
+        "I'll dress up as Father Christmas and will come with presents",
+        "I'll dress up as Father Christmas and will come with gifts",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>will, to dress up as, Father Christmas</u></b> |"}),
+    ("Что ты им купила?",
+    [
+        "What did you buy for them?",
+        "What did you buy them?",
+        "What have you bought for them?",
+        "What have you bought them?",
+        "What've you bought for them?",
+        "What've you bought them?",
     ]),
-    ("б",
+    ("Маме и сестре я везу перчатки, а папе - шарф",
     [
-        "b"
+        "I am bringing gloves to my mom and sister, and a scarf to dad",
+        "I am bringing gloves to my mother and sister, and a scarf to father",
+        "I'm bringing gloves to my mom and sister, and a scarf to dad",
+        "I'm bringing gloves to my mother and sister, and a scarf to father",
+        "I am bringing gloves for my mom and sister, and a scarf to dad",
+        "I am bringing gloves for my mother and sister, and a scarf to father",
+        "I'm bringing gloves for my mom and sister, and a scarf to dad",
+        "I'm bringing gloves for my mother and sister, and a scarf to father",
+        "I am bringing gloves to mom and sister, and a scarf to dad",
+        "I am bringing gloves to mother and sister, and a scarf to father",
+        "I'm bringing gloves to mom and sister, and a scarf to dad",
+        "I'm bringing gloves to mother and sister, and a scarf to father",
+        "I am bringing gloves for mom and sister, and a scarf to dad",
+        "I am bringing gloves for mother and sister, and a scarf to father",
+        "I'm bringing gloves for mom and sister, and a scarf to dad",
+        "I'm bringing gloves for mother and sister, and a scarf to father",
     ]),
-    ("Л",
+    ("Где они проживают?",
     [
-        "l"
-    ]),
-    ("о",
+        "Where do they reside?",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to reside</u></b> |"}),
+    ("Они живут в Сочи. Но я планирую снять домик в горах для всей семьи",
     [
-        "o"
-    ]),
-    ("ф",
+        "They live in Sochi. But I am planning to rent a lodge in the montains for the whole family",
+        "They reside in Sochi. But I am planning to rent a lodge in the montains for the whole family",
+        "They live in Sochi city. But I am planning to rent a lodge in the montains for the whole family",
+        "They reside in Sochi city. But I am planning to rent a lodge in the montains for the whole family",
+        "They live in Sochi. But I'm planning to rent a lodge in the montains for the whole family",
+        "They reside in Sochi. But I'm planning to rent a lodge in the montains for the whole family",
+        "They live in Sochi city. But I'm planning to rent a lodge in the montains for the whole family",
+        "They reside in Sochi city. But I'm planning to rent a lodge in the montains for the whole family",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to be planning to, a lodge</u></b> |"}),
+    ("Здорово! Я желаю вам хорошего отдыха и счастливого Рождества!",
     [
-        "f"
-    ])
+        "Great! I wish you good rest and Merry Christmas!",
+        "Cool! I wish you good rest and Merry Christmas!",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to wish, Merry Christmas</u></b> |"})
 ]

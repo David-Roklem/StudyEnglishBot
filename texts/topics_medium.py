@@ -1,4 +1,7 @@
-at_the_market = [
+from aiogram.utils.markdown import hlink
+
+
+topic_medium1 = [
     """
     Доброе утро! Мне нужны свежие овощи.
     Доброе утро! Выбирайте, что понравится, все овощи у меня свежие.
@@ -182,5 +185,250 @@ at_the_market = [
     [
         "Thanks!",
         "Thank you!"
+    ])
+]
+
+
+
+
+
+topic_medium2 = [
+    """
+    - Добрый день! У меня с утра болит голова. Что вы можете мне предложить?
+    - Здравствуйте! Вы мерили ваше давление? - Нет, у меня нет возможности.
+    - Вы можете это сделать у нас в аптеке. - Пожалуйста, присядьте здесь и протяните мне правую руку.
+    - Ваше давление в норме. Без рецепта я могу вам предложить «ибупрофен».
+    - Я раньше никогда не принимала его. - Это хорошее лекарство и оно поможет вам в течение 15 минут.
+    - Можно мне еще бутылку воды. - Конечно! С вас 2 доллара 80 центов.
+    """,
+    ("Добрый день! У меня с утра болит голова. Что вы можете мне предложить?",
+    [
+        "Good afternoon! I have got a headache since the morning. What can you offer?",
+        "Good afternoon! I have a headache from the morning. What can you offer?",
+        "Good afternoon! I have got a headache from the morning. What can you offer?",
+        "Good afternoon! I've got a headache from the morning. What can you offer?",
+        "Good afternoon! I have a headache since the morning. What can you offer?",
+        "Good afternoon! I've got a headache since the morning. What can you offer?",
+        "Good afternoon! I have a headache since morning. What can you offer?",
+        "Good afternoon! I have got a headache since morning. What can you offer?",
+        "Good afternoon! I've got a headache since morning. What can you offer?",
+        "Good day! I have a headache from the morning. What can you offer?",
+        "Good day! I have got a headache from the morning. What can you offer?",
+        "Good day! I've got a headache from the morning. What can you offer?",
+        "Good day! I have a headache since the morning. What can you offer?",
+        "Good day! I have got a headache since the morning. What can you offer?",
+        "Good day! I've got a headache since the morning. What can you offer?",
+        "Good day! I have a headache since morning. What can you offer?",
+        "Good day! I have got a headache since morning. What can you offer?",
+        "Good day! I've got a headache since morning. What can you offer?",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer</u></b> |"}),
+    ("Здравствуйте! Вы мерили ваше давление?",
+    [
+        "Hello! Did you measure your blood pressure?",
+        "Good afternoon! Did you measure your blood pressure?",
+        "Hello! Have you measured your blood pressure?",
+        "Good afternoon! Have you measured your blood pressure?",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>blood pressure</u></b> |"}),
+    ("Нет, у меня нет возможности",
+    [
+        "No, I don't have an opportunity",
+        "No, I do not have an opportunity",
+        "No, I have no opportunity"
+    ]),
+    ("Вы можете это сделать у нас в аптеке",
+    [
+        "You can do it here at our pharmacy",
+        "You can do it here in our pharmacy",
+        "You may do it here at our pharmacy",
+        "You may do it here in our pharmacy",
+        "You can do it here at our drugstore",
+        "You can do it here in our drugstore",
+        "You may do it here at our drugstore",
+        "You may do it here in our drugstore",
+        "You can do it here at our apothecary",
+        "You can do it here in our apothecary",
+        "You may do it here at our apothecary",
+        "You may do it here in our apothecary",
+        "You can do it here at our chemist's shop",
+        "You can do it here in our chemist's shop",
+        "You may do it here at our chemist's shop",
+        "You may do it here in our chemist's shop",
+    ]),
+    ("Пожалуйста, присядьте здесь и протяните мне правую руку",
+    [
+        "Please, sit down here and give me your right arm",
+        "Please, sit here and give me your right arm",
+        "Please, sit over here and give me your right arm",
+        "Please, sit down here and give me the right arm",
+        "Please, sit here and give me the right arm",
+        "Please, sit over here and give me the right arm",
+    ],
+    {"for_info": hlink("Разница между hand и arm", "http://surl.li/eeamc")}),
+    ("Ваше давление в норме. Без рецепта я могу вам предложить «ибупрофен»",
+    [
+        "Your blood pressure is normal. Without a prescription I can offer you «ibuprofen»",
+        "Your blood pressure's normal. Without a prescription I can offer you «ibuprofen»",
+        "Your blood pressure is in the norm. Without a prescription I can offer you «ibuprofen»",
+        "Your blood pressure's in the norm. Without a prescription I can offer you «ibuprofen»"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>a prescription, «ibuprofen»</u></b> |"}),
+    ("Я раньше никогда не принимала его",
+    [
+        "I have never taken it",
+        "I've never taken it"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>have, to take</u></b> |"}),
+    ("Это хорошее лекарство и оно поможет вам в течение 15 минут",
+    [
+        "It is good medication and it will help you within 15 minutes",
+        "It is good medication and it is going to help you within 15 minutes",
+        "It's good medication and it will help you within 15 minutes",
+        "It's good medication and it is going to help you within 15 minutes",
+        "It's good medication and it's going to help you within 15 minutes",
+        "It's good medication and it's gonna help you within 15 minutes",
+        "It is good medication and it's gonna help you within 15 minutes",
+        "It's good medication and it'll help you within 15 minutes",
+        "It is good medication and it'll help you within 15 minutes",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>medication, within</u></b> |"}),
+    ("Можно мне еще бутылку воды?",
+    [
+        "Can I also have a bottle of water?",
+        "Can I have a bottle of water as well?",
+        "May I also have a bottle of water?",
+        "May I have a bottle of water as well?",
+    ]),
+    ("Конечно! С вас 2 доллара 80 центов",
+    [
+        "Of course! That will be 2 dollars 80 cents",
+        "Of course! That'll be 2 dollars 80 cents",
+        "Of course! It will be 2 dollars 80 cents",
+        "Of course! It'll be 2 dollars 80 cents",
+        "Cartainly! That will be 2 dollars 80 cents",
+        "Cartainly! That'll be 2 dollars 80 cents",
+        "Cartainly! It will be 2 dollars 80 cents",
+        "Cartainly! It'll be 2 dollars 80 cents",
+        "Surely! That will be 2 dollars 80 cents",
+        "Surely! That'll be 2 dollars 80 cents",
+        "Surely! It will be 2 dollars 80 cents",
+        "Surely! It'll be 2 dollars 80 cents",
+        "Sure! That will be 2 dollars 80 cents",
+        "Sure! That'll be 2 dollars 80 cents",
+        "Sure! It will be 2 dollars 80 cents",
+        "Sure! It'll be 2 dollars 80 cents",
+        "Assuredly! That will be 2 dollars 80 cents",
+        "Assuredly! That'll be 2 dollars 80 cents",
+        "Assuredly! It will be 2 dollars 80 cents",
+        "Assuredly! It'll be 2 dollars 80 cents",
+        "Absolutely! That will be 2 dollars 80 cents",
+        "Absolutely! That'll be 2 dollars 80 cents",
+        "Absolutely! It will be 2 dollars 80 cents",
+        "Absolutely! It'll be 2 dollars 80 cents",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>will</u></b> |"})
+]
+
+
+
+
+
+topic_medium3 = [
+    """
+    Ваш маршрут построен. Через 300 метров поверните направо. Двигайтесь прямо пятьсот метров.
+    Держитесь левой полосы. На кольце съезжайте на третьем съезде. Езжайте прямо до первого перекрёстка. 
+    На перекрёстке развернитесь. Под мостом есть камера наблюдения за скоростным режимом. 
+    Вы въезжаете в населённый пункт. Вы приехали, счастливо оставаться
+    """,
+    ("Ваш маршрут построен",
+    [
+        "Your route is set",
+        "Your route's set",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>route</u></b> |"}),
+    ("Через триста метров поверните направо",
+    [
+        "In three hundred meters turn right",
+        "Turn right in three hundred meters",
+        "After three hundred meters turn right",
+        "Turn right after three hundred meters"
+    ]),
+    ("Двигайтесь прямо пятьсот метров",
+    [
+        "Move straight ahead for five hundred meters",
+        "Move ahead for five hundred meters",
+        "Move straight for five hundred meters",
+        "Move forward for five hundred meters",
+        "Move directly ahead for five hundred meters",
+        "Move directly for five hundred meters",
+    ]),
+    ("Держитесь левой полосы",
+    [
+        "Keep to the left lane",
+        "Hold to the left lane",
+        "Stick to the left lane",
+        "Follow on the left lane",
+        "Follow on to the left lane",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>the, lane</u></b> |"}),
+    ("На кольце съезжайте на третьем съезде",
+    [
+        "On the roundabout move out on the third exit",
+        "On the roundabout move out on the third exit",
+        "At the roundabout move out on the third exit",
+        "At the roundabout move out on the third exit",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>the, a roundabout, an exit</u></b> |"}),
+    ("Езжайте прямо до первого перекрёстка",
+    [
+        "Drive straight ahead until first crossroads",
+        "Drive ahead until first crossroads",
+        "Drive straight until first crossroads",
+        "Drive forward until first crossroads",
+        "Drive directly ahead until first crossroads",
+        "Drive directly until first crossroads",
+        "Go straight ahead until first crossroads",
+        "Go ahead until first crossroads",
+        "Go straight until first crossroads",
+        "Go forward until first crossroads",
+        "Go directly ahead until first crossroads",
+        "Go directly until first crossroads"
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>crossroads</u></b> |"}),
+    ("На перекрёстке развернитесь",
+    [
+        "Turn around on the crossroads",
+        "On the crossroads turn around",
+        "Turn around at the crossroads",
+        "At the crossroads turn around"
+    ]),
+    ("Под мостом есть камера наблюдения за скоростным режимом",
+    [
+        "There is a speed camera under the bridge",
+        "There's a speed camera under the bridge",
+        "Under the bridge there is a speed camera",
+        "Under the bridge there's a speed camera"
+    ]),
+    ("Вы въезжаете в населённый пункт",
+    [
+        "You are entering a locality",
+        "You're entering a locality",
+    ],
+    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>a locality</u></b> |"}),
+    ("Вы приехали, счастливо оставаться",
+    [
+        "You have arrived, have a nice stay",
+        "You have come, have a nice stay",
+        "You've come, have a nice stay",
+        "You have come, have a good stay",
+        "You've come, have a good stay",
+        "You have come, have a fine stay",
+        "You've come, have a fine stay",
+        "You've arrived, have a nice stay",
+        "You have arrived, have a good stay",
+        "You've arrived, have a good stay",
+        "You have arrived, have a fine stay",
+        "You've arrived, have a fine stay",
     ])
 ]
