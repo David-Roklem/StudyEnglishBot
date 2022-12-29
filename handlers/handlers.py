@@ -80,7 +80,9 @@ async def begin_learning(message: types.Message, state: FSMContext):
         await message.answer(f"1️⃣ {data['module'][1][0]}", reply_markup=ReplyKeyboardRemove())
         if len(data['module'][1]) == 3:
             if "hint" in data['module'][1][2].keys():
-                await message.answer(data['module'][1][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][1][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][1][2].keys():
                 await message.answer(data['module'][1][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -99,7 +101,9 @@ async def process_q_1(message: types.Message, state: FSMContext):
         await message.answer(f"2️⃣ {data['module'][2][0]}", reply_markup=kccb)
         if len(data['module'][2]) == 3:
             if "hint" in data['module'][2][2].keys():
-                await message.answer(data['module'][2][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][2][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][2][2].keys():
                 await message.answer(data['module'][2][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -118,7 +122,9 @@ async def process_q_2(message: types.Message, state: FSMContext):
         await message.answer(f"3️⃣ {data['module'][3][0]}", reply_markup=kccb)
         if len(data['module'][3]) == 3:
             if "hint" in data['module'][3][2].keys():
-                await message.answer(data['module'][3][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][3][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][3][2].keys():
                 await message.answer(data['module'][3][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -137,7 +143,9 @@ async def process_q_3(message: types.Message, state: FSMContext):
         await message.answer(f"4️⃣ {data['module'][4][0]}", reply_markup=kccb)
         if len(data['module'][4]) == 3:
             if "hint" in data['module'][4][2].keys():
-                await message.answer(data['module'][4][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][4][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][4][2].keys():
                 await message.answer(data['module'][4][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -156,7 +164,9 @@ async def process_q_4(message: types.Message, state: FSMContext):
         await message.answer(f"5️⃣ {data['module'][5][0]}", reply_markup=kccb)
         if len(data['module'][5]) == 3:
             if "hint" in data['module'][5][2].keys():
-                await message.answer(data['module'][5][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][5][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][5][2].keys():
                 await message.answer(data['module'][5][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -175,7 +185,9 @@ async def process_q_1(message: types.Message, state: FSMContext):
         await message.answer(f"6️⃣ {data['module'][6][0]}", reply_markup=kccb)
         if len(data['module'][6]) == 3:
             if "hint" in data['module'][6][2].keys():
-                await message.answer(data['module'][6][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][6][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][6][2].keys():
                 await message.answer(data['module'][6][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -194,7 +206,9 @@ async def process_q_6(message: types.Message, state: FSMContext):
         await message.answer(f"7️⃣ {data['module'][7][0]}", reply_markup=kccb)
         if len(data['module'][7]) == 3:
             if "hint" in data['module'][7][2].keys():
-                await message.answer(data['module'][7][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][7][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][7][2].keys():
                 await message.answer(data['module'][7][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -213,7 +227,9 @@ async def process_q_7(message: types.Message, state: FSMContext):
         await message.answer(f"8️⃣ {data['module'][8][0]}", reply_markup=kccb)
         if len(data['module'][8]) == 3:
             if "hint" in data['module'][8][2].keys():
-                await message.answer(data['module'][8][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][8][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][8][2].keys():
                 await message.answer(data['module'][8][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -232,11 +248,13 @@ async def process_q_8(message: types.Message, state: FSMContext):
         await message.answer(f"9️⃣ {data['module'][9][0]}", reply_markup=kccb)
         if len(data['module'][9]) == 3:
             if "hint" in data['module'][9][2].keys():
-                await message.answer(data['module'][9][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][9][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][9][2].keys():
                 await message.answer(data['module'][9][2].get('for_info'), reply_markup=kccb)
     await States.next()
-
+# {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer, farmer's pizza</u></b> |"}
 
 @dp.message_handler(state=States.q_9)
 async def process_q_9(message: types.Message, state: FSMContext):
@@ -251,7 +269,9 @@ async def process_q_9(message: types.Message, state: FSMContext):
         await message.answer(f"🔟 {data['module'][10][0]}", reply_markup=kccb)
         if len(data['module'][10]) == 3:
             if "hint" in data['module'][10][2].keys():
-                await message.answer(data['module'][10][2].get("hint"), reply_markup=kccb)
+                await message.answer(
+                    f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][10][2].get("hint")}</u></b> |',
+                    reply_markup=kccb)
             if "for_info" in data['module'][10][2].keys():
                 await message.answer(data['module'][10][2].get('for_info'), reply_markup=kccb)
     await States.next()

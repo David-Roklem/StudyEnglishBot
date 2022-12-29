@@ -9,7 +9,7 @@ from handlers import handlers
 
 
 async def on_startup(_):
-    print("Bot's online! 2translate")
+    print("2translate has started!")
 
 
 if __name__ == '__main__':

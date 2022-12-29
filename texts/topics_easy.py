@@ -26,7 +26,7 @@ topic_easy1 = [
         "Good day! Have you booked in advance?",
         "Good afternoon! Have you booked in advance?",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>in advance</u></b> |"}),
+    {"hint": "in advance"}),
     ("К сожалению, нет. У вас есть свободные номера?",
     [
         "Unfortunately, no. Do you have free rooms?",
@@ -75,7 +75,7 @@ topic_easy1 = [
         "You can pay for it separately for 9$",
         "You may pay for it separately for 9$",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>separately</u></b> |"}),
+    {"hint": "separately"}),
     ("Хорошо, меня устраивает. Я забронирую этот номер и завтрак",
     [
         "Good, it suits me. I will book this room and a breakfast",
@@ -154,7 +154,7 @@ topic_easy2 = [
         "I'm exhausted but I wanna eat very much!",
         "I'm exhausted but I wanna eat so much!"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>be exhausted</u></b> |"}),
+    {"hint": "be exhausted"}),
     ("Давай закажем пиццу прямо в отель",
     [
         "Let's order a pizza right into the hotel",
@@ -174,7 +174,7 @@ topic_easy2 = [
         "Let us order a pizza right into the hotel",
         "Let us order a pizza right into the hotel"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>right into</u></b> |"}),
+    {"hint": "right into"}),
     ("Хорошая идея! Я хочу, чтобы она была с грибами, а еще много сыра",
     [
         "Nice/good idea. I want it to be with with mushrooms and also with a lot of (much) cheese",
@@ -191,7 +191,7 @@ topic_easy2 = [
         "Good idea! I wish it to be with mushrooms and with much cheese as well",
         "Nice idea! I wish it to be with mushrooms and with much cheese as well"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to wish</u></b> |"}),
+    {"hint": "to wish"}),
     ("Здравствуйте! Можно заказать пиццу в отель?",
     [
         "Hello! Can I order a pizza to a hotel?",
@@ -218,7 +218,7 @@ topic_easy2 = [
         "Yes, we will be able to deliver in 30 minutes. What type of pizza would you like?",
         "Yes, we'll be able to deliver in 30 minutes. What type of pizza would you like?"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>would</u></b> |"}),
+    {"hint": "would"}),
     ("Я бы хотела в ней побольше сыра и грибов",
     [
         "I would like it to have more cheese and mushrooms",
@@ -231,7 +231,7 @@ topic_easy2 = [
         "I can offer you farmer's pizza. It will have chicken, mushrooms, tomatoes and parmesan cheese",
         "I can offer you farmer's pizza. It will have chicken, mushrooms, tomatoes and parmesan cheese in it"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer, farmer's pizza</u></b> |"}),
+    {"hint": "to offer, farmer's pizza"}),
     ("Отлично! Нам подходит!",
     [
         "Great! It suits us!",
@@ -269,7 +269,7 @@ topic_easy3 = [
         "Anna, did you dress uo your Christmas tree",
         "Anna, have you dressed up your Christmas tree"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>Christmas tree</u></b> |"}),
+    {"hint": "Christmas tree"}),
     ("Нет. Я в этом году лечу к родителям. Меня не будет целый месяц",
     [
         "No. I am flying to my parents this year. I am going to be away for a whole month",
@@ -300,12 +300,12 @@ topic_easy3 = [
         "However they don't know about it. I'm preparing a surprise",
         "However they do not know about it. I'm preparing a surprise",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>However</u></b> |"}),
+    {"hint": "However"}),
     ("Здорово! Расскажи поподробнее об этом",
     [
         "Awesome. Tell me more about it"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>awesome</u></b> |"}),
+    {"hint": "awesome"}),
     ("Я переоденусь в Деда Мороза и приду с подарками",
     [
         "I will dress up as Father Christmas and come with presents",
@@ -317,7 +317,7 @@ topic_easy3 = [
         "I'll dress up as Father Christmas and will come with presents",
         "I'll dress up as Father Christmas and will come with gifts",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>will, to dress up as, Father Christmas</u></b> |"}),
+    {"hint": "will, to dress up as, Father Christmas"}),
     ("Что ты им купила?",
     [
         "What did you buy for them?",
@@ -350,7 +350,7 @@ topic_easy3 = [
     [
         "Where do they reside?",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to reside</u></b> |"}),
+    {"hint": "to reside"}),
     ("Они живут в Сочи. Но я планирую снять домик в горах для всей семьи",
     [
         "They live in Sochi. But I am planning to rent a lodge in the montains for the whole family",
@@ -362,11 +362,11 @@ topic_easy3 = [
         "They live in Sochi city. But I'm planning to rent a lodge in the montains for the whole family",
         "They reside in Sochi city. But I'm planning to rent a lodge in the montains for the whole family",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to be planning to, a lodge</u></b> |"}),
+    {"hint": "to be planning to, a lodge"}),
     ("Здорово! Я желаю вам хорошего отдыха и счастливого Рождества!",
     [
         "Great! I wish you good rest and Merry Christmas!",
         "Cool! I wish you good rest and Merry Christmas!",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to wish, Merry Christmas</u></b> |"})
+    {"hint": "to wish, Merry Christmas"})
 ]

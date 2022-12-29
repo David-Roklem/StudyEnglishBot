@@ -31,7 +31,7 @@ topic_medium1 = [
         "Good morning! Pick whatever you fancy, I've got only fresh vegetables",
         "Good morning! Pick whatever you fancy, I have got only fresh vegetables"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>wahtever</u></b> |"}),
+    {"hint": "wahtever"}),
     ("Тогда я возьму 2 килограмма помидоров и 2 киллограмма огурцов, и 3 перца",
     [
         "In that case I'll take 2 kilograms of tomatoes and 2 kilograms of cucumbers and 3 peppers",
@@ -91,7 +91,7 @@ topic_medium1 = [
         "Where can I purchase apples?",
         "Where could I purchase apples?"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>purchase</u></b> |"}),
+    {"hint": "purchase"}),
     ("Пройдите прямо, а затем поверните направо после лавки с зеленью, там будут фрукты",
     [
         "Go straight and then turn right after a greenery stall, there'll be fruit",
@@ -222,7 +222,7 @@ topic_medium2 = [
         "Good day! I have got a headache since morning. What can you offer?",
         "Good day! I've got a headache since morning. What can you offer?",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>to offer</u></b> |"}),
+    {"hint": "to offer"}),
     ("Здравствуйте! Вы мерили ваше давление?",
     [
         "Hello! Did you measure your blood pressure?",
@@ -230,7 +230,7 @@ topic_medium2 = [
         "Hello! Have you measured your blood pressure?",
         "Good afternoon! Have you measured your blood pressure?",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>blood pressure</u></b> |"}),
+    {"hint": "blood pressure"}),
     ("Нет, у меня нет возможности",
     [
         "No, I don't have an opportunity",
@@ -273,13 +273,13 @@ topic_medium2 = [
         "Your blood pressure is in the norm. Without a prescription I can offer you «ibuprofen»",
         "Your blood pressure's in the norm. Without a prescription I can offer you «ibuprofen»"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>a prescription, «ibuprofen»</u></b> |"}),
+    {"hint": "a prescription, ibuprofen"}),
     ("Я раньше никогда не принимала его",
     [
         "I have never taken it",
         "I've never taken it"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>have, to take</u></b> |"}),
+    {"hint": "have, to take"}),
     ("Это хорошее лекарство и оно поможет вам в течение 15 минут",
     [
         "It is good medication and it will help you within 15 minutes",
@@ -292,7 +292,7 @@ topic_medium2 = [
         "It's good medication and it'll help you within 15 minutes",
         "It is good medication and it'll help you within 15 minutes",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>medication, within</u></b> |"}),
+    {"hint": "medication, within"}),
     ("Можно мне еще бутылку воды?",
     [
         "Can I also have a bottle of water?",
@@ -327,7 +327,7 @@ topic_medium2 = [
         "Absolutely! It will be 2 dollars 80 cents",
         "Absolutely! It'll be 2 dollars 80 cents",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>will</u></b> |"})
+    {"hint": "will"})
 ]
 
 
@@ -346,7 +346,7 @@ topic_medium3 = [
         "Your route is set",
         "Your route's set",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>route</u></b> |"}),
+    {"hint": "route"}),
     ("Через триста метров поверните направо",
     [
         "In three hundred meters turn right",
@@ -371,15 +371,15 @@ topic_medium3 = [
         "Follow on the left lane",
         "Follow on to the left lane",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>the, lane</u></b> |"}),
+    {"hint": "the, lane"}),
     ("На кольце съезжайте на третьем съезде",
     [
+        "At the roundabout move out at the third exit",
         "On the roundabout move out on the third exit",
-        "On the roundabout move out on the third exit",
-        "At the roundabout move out on the third exit",
+        "On the roundabout move out at the third exit",
         "At the roundabout move out on the third exit",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>the, a roundabout, an exit</u></b> |"}),
+    {"hint": "the, a roundabout, an exit"}),
     ("Езжайте прямо до первого перекрёстка",
     [
         "Drive straight ahead until first crossroads",
@@ -395,7 +395,7 @@ topic_medium3 = [
         "Go directly ahead until first crossroads",
         "Go directly until first crossroads"
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>crossroads</u></b> |"}),
+    {"hint": "a crossroads"}),
     ("На перекрёстке развернитесь",
     [
         "Turn around on the crossroads",
@@ -415,7 +415,7 @@ topic_medium3 = [
         "You are entering a locality",
         "You're entering a locality",
     ],
-    {"hint":"| <i>Подсказка</i>☝️: используйте <b><u>a locality</u></b> |"}),
+    {"hint": "a locality"}),
     ("Вы приехали, счастливо оставаться",
     [
         "You have arrived, have a nice stay",
@@ -430,5 +430,202 @@ topic_medium3 = [
         "You've arrived, have a good stay",
         "You have arrived, have a fine stay",
         "You've arrived, have a fine stay",
+    ])
+]
+
+
+
+
+
+topic_medium4 = [
+    """
+    - Посмотри на город, какой он красивый! - Мне не нравится. Здесь слишком много людей.
+    - Это Тайм-Сквер, самая знаменитая улица. Естественно, здесь будет много людей.
+    - Я помню эту улицу из американских фильмов. Такое чувство, что я здесь уже был.
+    - Нам нужно посетить музей естествознания. - Это далеко от нашей квартиры?
+    - Довольно далеко. Жилье в центре Нью-Йорка дорогое, поэтому пришлось забронировать квартиру подальше.
+    - Нам нужно ехать на метро? Там так много людей!
+    - Хватит жаловаться! Мы приехали смотреть большой город! - Ладно...
+    """,
+    ("Посмотри на город, какой он красивый!",
+    [
+        "Look at the city, it's so beautiful!",
+        "Look at the city, it is so beautiful!",
+        "Look at the city, that's so beautiful!",
+        "Look at the city, that is so beautiful!",
+        "Look at the city, it's so lovely!",
+        "Look at the city, it is so lovely!",
+        "Look at the city, that's so lovely!",
+        "Look at the city, that is so lovely!"
+    ]),
+    ("Мне не нравится. Здесь слишком много людей",
+    [
+        "I do not like it. There are too many people",
+        "I d'not like it. There are too many people",
+        "I do not like this. There are too many people",
+        "I d'not like this. There are too many people"
+    ]),
+    ("Это Таймс-Сквер, самая знаменитая улица. Естественно, здесь много людей",
+    [
+        "This is Times Square, the most famous street. Naturally, there are many people here",
+        "This is Times Square, the most famous street. Naturally, there are lots of people here",
+        "This is Times Square, the most famous street. Naturally, there are a lot of people here",
+        "It is Times Square, the most famous street. Naturally, there are many people here",
+        "It is Times Square, the most famous street. Naturally, there are lots of people here",
+        "It is Times Square, the most famous street. Naturally, there are a lot of people here",
+        "It's Times Square, the most famous street. Naturally, there are many people here",
+        "It's Times Square, the most famous street. Naturally, there are lots of people here",
+        "It's Times Square, the most famous street. Naturally, there are a lot of people here"
+    ],
+    {"hint": "Times Square, aturally"}),
+    ("Я помню эту улицу из американских фильмов. Такое чувство, что я здесь уже был",
+    [
+        "I remember this street from American films. It feels like that I have been here",
+        "I remember this street from American movies. It feels like that I have been here",
+        "I remember this street from American films. It feels like that I have been here before",
+        "I remember this street from American movies. It feels like that I have been here before",
+        "I remember this street from American films. It feels like that I've been here",
+        "I remember this street from American movies. It feels like that I've been here",
+        "I remember this street from American films. It feels like that I've been here before",
+        "I remember this street from American movies. It feels like that I've been here before",
+        "I remember this street from American films. Feels like that I have been here",
+        "I remember this street from American movies. Feels like that I have been here",
+        "I remember this street from American films. Feels like that I have been here before",
+        "I remember this street from American movies. Feels like that I have been here before",
+        "I remember this street from American films. Feels like that I've been here",
+        "I remember this street from American movies. Feels like that I've been here",
+        "I remember this street from American films. Feels like that I've been here before",
+        "I remember this street from American movies. Feels like that I've been here before",
+        "I remember this street from American films. It feels like I have been here",
+        "I remember this street from American movies. It feels like I have been here",
+        "I remember this street from American films. It feels like I have been here before",
+        "I remember this street from American movies. It feels like I have been here before",
+        "I remember this street from American films. It feels like I've been here",
+        "I remember this street from American movies. It feels like I've been here",
+        "I remember this street from American films. It feels like I've been here before",
+        "I remember this street from American movies. It feels like I've been here before",
+        "I remember this street from American films. Feels like I have been here",
+        "I remember this street from American movies. Feels like I have been here",
+        "I remember this street from American films. Feels like I have been here before",
+        "I remember this street from American movies. Feels like I have been here before",
+        "I remember this street from American films. Feels like I've been here",
+        "I remember this street from American movies. Feels like I've been here",
+        "I remember this street from American films. Feels like I've been here before",
+        "I remember this street from American movies. Feels like I've been here before",
+    ]),
+    ("Нам нужно посетить музей естествознания",
+    [
+        "We need to visit American Museum of Natural History",
+        "We have to visit American Museum of Natural History",
+        "We must visit American Museum of Natural History",
+        "We have got to visit American Museum of Natural History",
+        "We've got to visit American Museum of Natural History",
+        "We need to attend American Museum of Natural History",
+        "We have to attend American Museum of Natural History",
+        "We must attend American Museum of Natural History",
+        "We have got to attend American Museum of Natural History",
+        "We've got to attend American Museum of Natural History",
+    ],
+    {"hint": "American Museum of Natural History"}),
+    ("Это далеко от нашей квартиры?",
+    [
+        "Is it far from our flat?",
+        "Is that far from our flat?",
+        "Is it a long way from our flat?",
+        "Is that a long way from our flat?",
+    ],
+    {"hint": "a flat"}),
+    ("Довольно далеко. Жилье в центре Нью-Йорка дорогое, поэтому пришлось забронировать квартиру загородом",
+    [
+        "Quite far away. Housing in the center of New York is expensive so we had to rent a flat in the countryside",
+        "Quite far away. Housing in the centre of New York is expensive so we had to rent a flat in the countryside",
+        "Quite far. Housing in the center of New York is expensive so we had to rent a flat in the countryside",
+        "Quite far. Housing in the centre of New York is expensive so we had to rent a flat in the countryside",
+        "Pretty far away. Housing in the center of New York is expensive so we had to rent a flat in the countryside",
+        "Pretty far away. Housing in the centre of New York is expensive so we had to rent a flat in the countryside",
+        "Pretty far. Housing in the center of New York is expensive so we had to rent a flat in the countryside",
+        "Pretty far. Housing in the centre of New York is expensive so we had to rent a flat in the countryside",
+        "Quite far away. Housing in the center of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Quite far away. Housing in the centre of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Quite far. Housing in the center of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Quite far. Housing in the centre of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Pretty far away. Housing in the center of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Pretty far away. Housing in the centre of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Pretty far. Housing in the center of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Pretty far. Housing in the centre of New York is expensive, that is why we had to rent a flat in the countryside",
+        "Quite far away. Housing in the center of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Quite far away. Housing in the centre of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Quite far. Housing in the center of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Quite far. Housing in the centre of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Pretty far away. Housing in the center of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Pretty far away. Housing in the centre of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Pretty far. Housing in the center of New York is expensive, that's why we had to rent a flat in the countryside",
+        "Pretty far. Housing in the centre of New York is expensive, that's why we had to rent a flat in the countryside",
+    ],
+    {"hint": "housing, have to, in the countryside"}),
+    ("Нам нужно ехать на метро? Там так много людей!",
+    [
+        "Do we need to go by subway? It is so crowded!",
+        "Do we need to go by subway? It's so crowded!",
+        "Do we have to go by subway? It is so crowded!",
+        "Do we have to go by subway? It's so crowded!",
+        "Must we go by subway? It is so crowded!",
+        "Must we go by subway? It's so crowded!",
+        "Should we go by subway? It is so crowded!",
+        "Should we go by subway? It's so crowded!",
+        "Do we need to go on subway? It is so crowded!",
+        "Do we need to go on subway? It's so crowded!",
+        "Do we have to go on subway? It is so crowded!",
+        "Do we have to go on subway? It's so crowded!",
+        "Must we go on subway? It is so crowded!",
+        "Must we go on subway? It's so crowded!",
+        "Should we go on subway? It is so crowded!",
+        "Should we go on subway? It's so crowded!",
+        "Do we need to go by the subway? It is so crowded!",
+        "Do we need to go by the subway? It's so crowded!",
+        "Do we have to go by the subway? It is so crowded!",
+        "Do we have to go by the subway? It's so crowded!",
+        "Must we go by the subway? It is so crowded!",
+        "Must we go by the subway? It's so crowded!",
+        "Should we go by the subway? It is so crowded!",
+        "Should we go by the subway? It's so crowded!",
+        "Do we need to go on the subway? It is so crowded!",
+        "Do we need to go on the subway? It's so crowded!",
+        "Do we have to go on the subway? It is so crowded!",
+        "Do we have to go on the subway? It's so crowded!",
+        "Must we go on the subway? It is so crowded!",
+        "Must we go on the subway? It's so crowded!",
+        "Should we go on the subway? It is so crowded!",
+        "Should we go on the subway? It's so crowded!",
+    ],
+    {"hint": "subway, be crowded"}),
+    ("Хватит жаловаться! Мы приехали смотреть большой город!",
+    [
+        "Stop complaining. We have come to see a big city!",
+        "Stop complaining. We've come to see a big city!",
+        "Stop complaining. We have come to see a large city!",
+        "Stop complaining. We've come to see a large city!",
+        "Stop complaining. We have come to see a great city!",
+        "Stop complaining. We've come to see a great city!",
+        "Cease complaining. We have come to see a big city!",
+        "Cease complaining. We've come to see a big city!",
+        "Cease complaining. We have come to see a large city!",
+        "Cease complaining. We've come to see a large city!",
+        "Cease complaining. We have come to see a great city!",
+        "Cease complaining. We've come to see a great city!",
+        "Finish complaining. We have come to see a big city!",
+        "Finish complaining. We've come to see a big city!",
+        "Finish complaining. We have come to see a large city!",
+        "Finish complaining. We've come to see a large city!",
+        "Finish complaining. We have come to see a great city!",
+        "Finish complaining. We've come to see a great city!",
+    ],
+    {"for_info": hlink("Употребление глаголов после «stop»", "http://surl.li/effwq")}),
+    ("Ладно",
+    [
+        "Alright",
+        "All right",
+        "OK",
+        "Okay"
     ])
 ]
