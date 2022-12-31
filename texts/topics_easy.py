@@ -108,7 +108,7 @@ topic_easy1 = [
     ("Дебетовой картой, пожалуйста",
     [
         "By debit card, please",
-        "Withy debit card, please",
+        "With debit card, please",
         "Debit card, please"
     ]),
     ("Вот платежный терминал",
@@ -124,16 +124,16 @@ topic_easy1 = [
 
 topic_easy2 = [
     """
-    Я очень устала, но так хочу есть! 
-    Давай закажем пиццу прямо в отель.
-    Хорошая идея! Я хочу, чтобы она была с грибами, а еще много сыра.
-    Здравствуйте! Можно заказать пиццу в отель?
-    Добрый день! Скажите, пожалуйста, ваш адрес, я проверю, доставляем ли мы туда. - Ул. Зеленая, д. 11.
-    Да, мы сможем осуществить доставку за 30 минут. Какую пиццу вы бы хотели?
-    Я бы хотела в ней побольше сыра и грибов.
-    Я могу вам предложить пиццу «фермерская». В ней будут, курица, грибы, томаты и сыр пармезан.
-    Отлично! Нам подходит!
-    Ожидайте пиццу через полчаса. Приятного аппетита!
+    - Я очень устала, но так хочу есть! 
+    - Давай закажем пиццу прямо в отель.
+    - Хорошая идея! Я хочу, чтобы она была с грибами, а еще много сыра.
+    - Здравствуйте! Можно заказать пиццу в отель?
+    - Добрый день! Скажите, пожалуйста, ваш адрес, я проверю, доставляем ли мы туда.
+    - Да, мы сможем осуществить доставку за 30 минут. Какую пиццу вы бы хотели?
+    - Я бы хотела в ней побольше сыра и грибов.
+    - Я могу вам предложить пиццу «фермерская». В ней будут, курица, грибы, томаты и сыр пармезан.
+    - Отлично! Нам подходит!
+    - Ожидайте пиццу через полчаса. Приятного аппетита!
     """,
     ("Я очень устала, но так хочу есть!",
     [
@@ -197,16 +197,16 @@ topic_easy2 = [
         "Hello! Can I order a pizza to a hotel?",
         "Hello! Can I order a pizza into a hotel?"
     ]),
-    ("Добрый день! Скажите, пожалуйста, ваш адрес, я проверю, доставляем ли мы туда. - Ул. Зеленая, д. 11",
+    ("Добрый день! Скажите, пожалуйста, ваш адрес, я проверю, доставляем ли мы туда.",
     [
-        "Good day! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
-        "Good afternoon! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
-        "Good day! Tell me, please, your address, I will check if we deliver there. - Green street, 11",
-        "Good afternoon! Tell me, please, your address, I will check if we deliver there. - Green street, 11",
-        "Good day! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
-        "Good afternoon! Tell me, please, your address, I'll check if we deliver there. - Green street, 11",
-        "Good day! Tell me, please, your address, I will check if we deliver there. - Green street, 11",
-        "Good afternoon! Tell me, please, your address, I will check if we deliver there. - Green street, 11"
+        "Good day! Tell me, please, your address, I'll check if we deliver there.",
+        "Good afternoon! Tell me, please, your address, I'll check if we deliver there.",
+        "Good day! Tell me, please, your address, I will check if we deliver there.",
+        "Good afternoon! Tell me, please, your address, I will check if we deliver there.",
+        "Good day! Tell me, please, your address, I'll check if we deliver there.",
+        "Good afternoon! Tell me, please, your address, I'll check if we deliver there.",
+        "Good day! Tell me, please, your address, I will check if we deliver there.",
+        "Good afternoon! Tell me, please, your address, I will check if we deliver there."
     ]),
     ("Да, мы сможем осуществить доставку за 30 минут. Какую пиццу вы бы хотели?",
     [
@@ -264,10 +264,10 @@ topic_easy3 = [
     """,
     ("Анна, ты уже нарядила свою ёлку?",
     [
-        "Anna, did you decorate your Christmas tree",
-        "Anna, have you decorated your Christmas tree",
-        "Anna, did you dress uo your Christmas tree",
-        "Anna, have you dressed up your Christmas tree"
+        "Anna, did you decorate your Christmas tree?",
+        "Anna, have you decorated your Christmas tree?",
+        "Anna, did you dress uo your Christmas tree?",
+        "Anna, have you dressed up your Christmas tree?"
     ],
     {"hint": "Christmas tree"}),
     ("Нет. Я в этом году лечу к родителям. Меня не будет целый месяц",
@@ -369,4 +369,167 @@ topic_easy3 = [
         "Cool! I wish you good rest and Merry Christmas!",
     ],
     {"hint": "to wish, Merry Christmas"})
+]
+
+
+
+
+
+topic_easy4 = [
+    """
+    Сегодня я приехал в новый город. Тут холоднее, чем в моём городе.
+    Мой друг встретил меня в аэропорту. У моего друга хорошая машина. 
+    Прямо сейчас мы едем домой к моему другу. У него очень большая и дружелюбная семья.
+    Они живут в центре города. Их квартира находится на девятом этаже.
+    Я буду жить в маленькой комнате рядом с кухней. Я очень рад своему отпуску.
+    """,
+    ("Сегодня я приехал в новый город",
+    [
+        "Today I have come to a new city",
+        "Today I've come to a new city",
+        "Today I came to a new city",
+        "Today I have come to a new town",
+        "Today I've come to a new town",
+        "Today I came to a new town"
+    ]),
+    ("Тут холоднее, чем в моём городе",
+    [
+        "It is colder here than in my city",
+        "It's colder here than in my city",
+        "It is colder here than in my town",
+        "It's colder here than in my town",
+        "Here it is colder than in my city",
+        "Here it's colder than in my city",
+        "Here it is colder than in my town",
+        "Here it's colder than in my town"
+    ]),
+    ("Мой друг встретил меня в аэропорту",
+    [
+        "My friend met me at the airport",
+    ],
+    {"hint": "at"}),
+    ("У моего друга хорошая машина",
+    [
+        "My friend has a good car",
+        "My friend has got a good car",
+        "My friend's got a good car",
+        "My friend has a fine car",
+        "My friend has got a fine car",
+        "My friend's got a fine car",
+        "My friend has a nice car",
+        "My friend has got a nice car",
+        "My friend's got a nice car",
+    ]),
+    ("Прямо сейчас мы едем домой к моему другу",
+    [
+        "Right now we are going to my friend's house",
+        "Right now we're going to my friend's house",
+        "Right now we are driving to my friend's house",
+        "Right now we're driving to my friend's house",
+        "Right now we are going to my friend's home",
+        "Right now we're going to my friend's home",
+        "Right now we are driving to my friend's home",
+        "Right now we're driving to my friend's home"
+    ],
+    {"hint": "friend's"}),
+    ("У него очень большая и дружелюбная семья",
+    [
+        "He has a very big and friendly family",
+        "He has got a very big and friendly family",
+        "He's got a very big and friendly family",
+        "He has a really big and friendly family",
+        "He has got a really big and friendly family",
+        "He's got a really big and friendly family"
+    ]),
+    ("Они живут в центре города",
+    [
+        "They live in the city center",
+    ],
+    {"hint": "the city center"}),
+    ("Их квартира находится на девятом этаже",
+    [
+        "Their apartment is on the nineth floor",
+        "Their flat is on the nineth floor",
+        "Their apartment is on the nineth storey",
+        "Their flat is on the nineth storey"
+    ]),
+    ("Я буду жить в маленькой комнате рядом с кухней",
+    [
+        "I will live in a small room near the kitchen",
+        "I will live in a little room near the kitchen",
+        "I will live in a small room close to the kitchen",
+        "I will live in a little room close to the kitchen",
+        "I will live in a small room next door to the kitchen",
+        "I will live in a little room next door to the kitchen",
+        "I will live in a small room by the kitchen",
+        "I will live in a little room by the kitchen",
+        "I'll live in a small room near the kitchen",
+        "I'll live in a little room near the kitchen",
+        "I'll live in a small room close to the kitchen",
+        "I'll live in a little room close to the kitchen",
+        "I'll live in a small room next door to the kitchen",
+        "I'll live in a little room next door to the kitchen",
+        "I'll live in a small room by the kitchen",
+        "I'll live in a little room by the kitchen",
+        "I am going to live in a small room near the kitchen",
+        "I am going to live in a little room near the kitchen",
+        "I am going to live in a small room close to the kitchen",
+        "I am going to live in a little room close to the kitchen",
+        "I am going to live in a small room next door to the kitchen",
+        "I am going to live in a little room next door to the kitchen",
+        "I am going to live in a small room by the kitchen",
+        "I am going to live in a little room by the kitchen",
+        "I am going to live in a small room near the kitchen",
+        "I am going to live in a little room near the kitchen",
+        "I am going to live in a small room close to the kitchen",
+        "I am going to live in a little room close to the kitchen",
+        "I am going to live in a small room next door to the kitchen",
+        "I am going to live in a little room next door to the kitchen",
+        "I am going to live in a small room by the kitchen",
+        "I am going to live in a little room by the kitchen",
+        "I'm going to live in a small room near the kitchen",
+        "I'm going to live in a little room near the kitchen",
+        "I'm going to live in a small room close to the kitchen",
+        "I'm going to live in a little room close to the kitchen",
+        "I'm going to live in a small room next door to the kitchen",
+        "I'm going to live in a little room next door to the kitchen",
+        "I'm going to live in a small room by the kitchen",
+        "I'm going to live in a little room by the kitchen",
+        "I'm going to live in a small room near the kitchen",
+        "I'm going to live in a little room near the kitchen",
+        "I'm going to live in a small room close to the kitchen",
+        "I'm going to live in a little room close to the kitchen",
+        "I'm going to live in a small room next door to the kitchen",
+        "I'm going to live in a little room next door to the kitchen",
+        "I'm going to live in a small room by the kitchen",
+        "I'm going to live in a little room by the kitchen",
+        "I'm gonna to live in a small room near the kitchen",
+        "I'm gonna to live in a little room near the kitchen",
+        "I'm gonna to live in a small room close to the kitchen",
+        "I'm gonna to live in a little room close to the kitchen",
+        "I'm gonna to live in a small room next door to the kitchen",
+        "I'm gonna to live in a little room next door to the kitchen",
+        "I'm gonna to live in a small room by the kitchen",
+        "I'm gonna to live in a little room by the kitchen",
+        "I'm gonna to live in a small room near the kitchen",
+        "I'm gonna to live in a little room near the kitchen",
+        "I'm gonna to live in a small room close to the kitchen",
+        "I'm gonna to live in a little room close to the kitchen",
+        "I'm gonna to live in a small room next door to the kitchen",
+        "I'm gonna to live in a little room next door to the kitchen",
+        "I'm gonna to live in a small room by the kitchen",
+        "I'm gonna to live in a little room by the kitchen"
+    ]),
+    ("Я очень рад своему отпуску",
+    [
+        "I am very happy about my vacation",
+        "I'm very happy about my vacation",
+        "I am really happy about my vacation",
+        "I'm really happy about my vacation",
+        "I am very happy about my holiday",
+        "I'm very happy about my holiday",
+        "I am really happy about my holiday",
+        "I'm really happy about my holiday"
+    ],
+    {"hint": "be happy about"})
 ]

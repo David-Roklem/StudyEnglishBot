@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardRemove
-from keyboards.keyboard import kbsbcb, kbl, kbt_e, kbt_m, kbt_h, kb_start_learning, kccb
+from keyboards.keyboard import kbsbcb, kbl, kbt_e, kbt_m, kbt_h, kb_start_learning, kccb, kbyesno
 from FSMstates.states import States
 from topics_all import list_of_topics
 import texts
@@ -34,8 +34,36 @@ async def cmd_cancel(message: types.Message, state: FSMContext):
     current_state = await state.get_state()
     if current_state is None:
         return
+    await message.answer('<b>Вы уверены, что хотите выйти из теста?</b>', reply_markup=kbyesno)
+    await message.delete()
+
+
+@dp.message_handler(Text(equals='Выйти из теста', ignore_case=True), state='*')
+async def cmd_cancel_exit(message: types.Message, state: FSMContext):
+    current_state = await state.get_state()
+    if current_state is None:
+        return
     await state.finish()
-    await message.answer('<b>Вы вышли из теста.</b>', reply_markup=kbsbcb)
+    await message.answer('<b>Вы вышли из теста</b>', reply_markup=kbsbcb)
+
+
+@dp.message_handler(Text(equals='Продолжить тест', ignore_case=True), state='*')
+async def cmd_cancel_stay(message: types.Message, state: FSMContext):
+    current_state = await state.get_state()
+    if current_state is None:
+        return
+    await message.answer('<b>Тест продолжается. Впишите сюда⬇️ ваш ответ на последний вопрос</b>',
+    reply_markup=kccb)
+    await message.delete()
+    # async with state.proxy() as data:
+    #     await message.answer(data['module'][data["current_question_number"]][0], reply_markup=kccb)
+    #     if len(data['module'][data['current_question_number']]) == 3:
+    #         if "hint" in data['module'][data["current_question_number"]][2].keys():
+    #             await message.answer(
+    #                 f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][data["current_question_number"]][2].get("hint")}</u></b> |',
+    #                 reply_markup=kccb)
+    #         if "for_info" in data['module'][data["current_question_number"]][2].keys():
+    #             await message.answer(data['module'][data["current_question_number"]][2].get('for_info'), reply_markup=kccb)
 
 
 @dp.message_handler(commands=['низкий', 'средний', 'высокий'], state=States.level)
@@ -77,7 +105,8 @@ async def determine_topic_and_show_first_question(message: types.Message, state:
 @dp.message_handler(Text(equals='Начать заниматься', ignore_case=True), state=States.show_whole_text)
 async def begin_learning(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
-        await message.answer(f"1️⃣ {data['module'][1][0]}", reply_markup=ReplyKeyboardRemove())
+        data['current_question_number'] = 1
+        await message.answer(f"1️⃣ {data['module'][1][0]}", reply_markup=kccb)
         if len(data['module'][1]) == 3:
             if "hint" in data['module'][1][2].keys():
                 await message.answer(
@@ -91,6 +120,7 @@ async def begin_learning(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_1)
 async def process_q_1(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 2
         data['all_answers_lowered_q_1'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][1][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_1']:
             await message.reply("Правильно! 😃🥳")
@@ -112,6 +142,7 @@ async def process_q_1(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_2)
 async def process_q_2(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 3
         data['all_answers_lowered_q_2'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][2][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_2']:
             await message.reply("Правильно! 😃🥳")
@@ -133,6 +164,7 @@ async def process_q_2(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_3)
 async def process_q_3(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 4
         data['all_answers_lowered_q_3'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][3][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_3']:
             await message.reply("Правильно! 😃🥳")
@@ -154,6 +186,7 @@ async def process_q_3(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_4)
 async def process_q_4(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 5
         data['all_answers_lowered_q_4'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][4][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_4']:
             await message.reply("Правильно! 😃🥳")
@@ -175,6 +208,7 @@ async def process_q_4(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_5)
 async def process_q_1(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 6
         data['all_answers_lowered_q_5'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][5][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_5']:
             await message.reply("Правильно! 😃🥳")
@@ -196,6 +230,7 @@ async def process_q_1(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_6)
 async def process_q_6(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 7
         data['all_answers_lowered_q_6'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][6][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_6']:
             await message.reply("Правильно! 😃🥳")
@@ -217,6 +252,7 @@ async def process_q_6(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_7)
 async def process_q_7(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 8
         data['all_answers_lowered_q_7'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][7][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_7']:
             await message.reply("Правильно! 😃🥳")
@@ -238,6 +274,7 @@ async def process_q_7(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_8)
 async def process_q_8(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 9
         data['all_answers_lowered_q_8'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][8][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_8']:
             await message.reply("Правильно! 😃🥳")
@@ -259,6 +296,7 @@ async def process_q_8(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_9)
 async def process_q_9(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 10
         data['all_answers_lowered_q_9'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][9][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in  data['all_answers_lowered_q_9']:
             await message.reply("Правильно! 😃🥳")
@@ -280,6 +318,7 @@ async def process_q_9(message: types.Message, state: FSMContext):
 @dp.message_handler(state=States.q_10)
 async def process_q_10(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
+        data['current_question_number'] = 10
         data['all_answers_lowered_q_10'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][10][1]))
         if re.sub("[^A-Za-z0-9]", "", message.text.lower()) in data['all_answers_lowered_q_10']:
             await message.reply("Правильно! 😃🥳")

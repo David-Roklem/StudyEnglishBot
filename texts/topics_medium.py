@@ -439,13 +439,16 @@ topic_medium3 = [
 
 topic_medium4 = [
     """
-    - Посмотри на город, какой он красивый! - Мне не нравится. Здесь слишком много людей.
+    - Посмотри на город, какой он красивый!
+    - Мне не нравится. Здесь слишком много людей.
     - Это Тайм-Сквер, самая знаменитая улица. Естественно, здесь будет много людей.
     - Я помню эту улицу из американских фильмов. Такое чувство, что я здесь уже был.
-    - Нам нужно посетить музей естествознания. - Это далеко от нашей квартиры?
+    - Нам нужно посетить музей естествознания.
+    - Это далеко от нашей квартиры?
     - Довольно далеко. Жилье в центре Нью-Йорка дорогое, поэтому пришлось забронировать квартиру подальше.
     - Нам нужно ехать на метро? Там так много людей!
-    - Хватит жаловаться! Мы приехали смотреть большой город! - Ладно...
+    - Хватит жаловаться! Мы приехали смотреть большой город!
+    - Ладно...
     """,
     ("Посмотри на город, какой он красивый!",
     [
@@ -628,4 +631,118 @@ topic_medium4 = [
         "OK",
         "Okay"
     ])
+]
+
+
+
+
+
+topic_medium5 = [
+    """
+    - Здравствуйте! Меня зовут Мария, я ваша официантка.
+    - Я могу вам помочь с заказом?
+    - Приветствую, Мария! Какие напитки у вас есть?
+    - У нас есть газировка, соки, а также фирменный клубничный лимонад.
+    - Это любопытно! Можно нам графин вашего лимонада?
+    - А какие салаты вы подаёте?
+    - У нас есть отличный салат от шефа. В него входят орехи и сезонные овощи. 
+    - Отлично! Тогда я буду еще этот салат.
+    - А я бы хотела грибной суп и тарелку риса с курицей для моего племянника.
+    - Спасибо за заказ! Лимонад я принесу сразу, а ваши блюда по готовности.
+    """,
+    ("Здравствуйте! Меня зовут Мария, я ваша официантка",
+    [
+        "Hello! My name is Maria, I am your waitress",
+        "Hello! My name is Maria, I'm your waitress",
+        "Hello! My name's Maria, I am your waitress",
+        "Hello! My name's Maria, I'm your waitress",
+    ]),
+    ("Я могу вам помочь с заказом?",
+    [
+        "Can I help you with the order?",
+        "Can I help you with your order?",
+        "May I help you with the order?",
+        "May I help you with your order?",
+    ]),
+    ("Приветствую, Мария! Какие напитки у вас есть?",
+    [
+        "Greetings, Maria! What beverages do you have?",
+        "Greetings, Maria! What drinks do you have?",
+        "Greetings, Maria! What beverages have you got?",
+        "Greetings, Maria! What drinks have you got?",
+    ],
+    {"hint": "greetings"}),
+    ("У нас есть газировка, соки, а также фирменный клубничный лимонад",
+    [
+        "We have soda, juices and also branded strawberry lemonade",
+        "We have got soda, juices and also branded strawberry lemonade",
+        "We've got soda, juices and also branded strawberry lemonade",
+        "We have soda, juices as well as branded strawberry lemonade",
+        "We have got soda, juices as well as branded strawberry lemonade",
+        "We've got soda, juices as well as branded strawberry lemonade",
+        "We have soda, juices and branded strawberry lemonade as well",
+        "We have got soda, juices and branded strawberry lemonade as well",
+        "We've got soda, juices and branded strawberry lemonade as well"
+    ],
+    {"hint": "soda, branded"}),
+    ("Это любопытно! Можно нам графин вашего лимонада?",
+    [
+        "That is curious! Can we have a decanter of your lemonade?",
+        "That's curious! Can we have a decanter of your lemonade?",
+    ],
+    {"hint": "curious, a decanter"}),
+    ("А какие салаты вы подаёте?",
+    [
+        "And what salads do you serve?"
+    ],
+    {"hint": "to serve"}),
+    ("У нас есть отличный салат от шефа. В него входят орехи и сезонные овощи",
+    [
+        "We have an excellent salad from the chef. It includes nuts and seasonal vegetables",
+        "We have an excellent salad from the chef. It includes nuts and season vegetables",
+        "We have got an excellent salad from the chef. It includes nuts and seasonal vegetables",
+        "We have got an excellent salad from the chef. It includes nuts and season vegetables",
+        "We have an excellent salad from the chef. It involves nuts and seasonal vegetables",
+        "We have an excellent salad from the chef. It involves nuts and season vegetables",
+        "We have got an excellent salad from the chef. It involves nuts and seasonal vegetables",
+        "We have got an excellent salad from the chef. It involves nuts and season vegetables"
+    ]),
+    ("Отлично! Тогда я буду еще этот салат",
+    [
+        "Great! Then I will also have that salad",
+        "Great! Then I'll also have that salad",
+        "Awesome! Then I will also have that salad",
+        "Awesome! Then I'll also have that salad",
+        "Splendid! Then I will also have that salad",
+        "Splendid! Then I'll also have that salad",
+        "Great! Then I will have that salad as well",
+        "Great! Then I'll have that salad as well",
+        "Awesome! Then I will have that salad as well",
+        "Awesome! Then I'll have that salad as well",
+        "Splendid! Then I will have that salad as well",
+        "Splendid! Then I'll have that salad as well",
+    ]),
+    ("А я бы хотела грибной суп и тарелку риса с курицей для моего племянника",
+    [
+        "And I would like a mushroom soup and a plate of rice with chicken for my nephew",
+        "And Iэd like a mushroom soup and a plate of rice with chicken for my nephew",
+        "And I would like a mushroom soup and a dish of rice with chicken for my nephew",
+        "And Iэd like a mushroom soup and a dish of rice with chicken for my nephew",
+    ]),
+    ("Спасибо за заказ! Лимонад я принесу сразу, а ваши блюда по готовности",
+    [
+        "Thanks for the order! The lemonade I will bring at once and the dishes on readiness",
+        "Thank you for the order! The lemonade I will bring at once and the dishes on readiness",
+        "Thanks for the order! The lemonade I will bring right away and the dishes on readiness",
+        "Thank you for the order! The lemonade I will bring right away and the dishes on readiness",
+        "Thanks for the order! The lemonade I will bring straight away and the dishes on readiness",
+        "Thank you for the order! The lemonade I will bring straight away and the dishes on readiness",
+        "Thanks for the order! I will bring the lemonade at once and the dishes on readiness",
+        "Thank you for the order! I will bring the lemonade at once and the dishes on readiness",
+        "Thanks for the order! I will bring the lemonade right away and the dishes on readiness",
+        "Thank you for the order! I will bring the lemonade right away and the dishes on readiness",
+        "Thanks for the order! I will bring the lemonade straight away and the dishes on readiness",
+        "Thank you for the order! I will bring the lemonade straight away and the dishes on readiness",
+    ],
+    {"hint": "the, on readiness"}),
 ]

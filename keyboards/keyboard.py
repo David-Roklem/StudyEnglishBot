@@ -8,6 +8,13 @@ kbsbcb = ReplyKeyboardMarkup(resize_keyboard=True)
 kbsbcb.add(sb).add(cb)
 
 
+# Check if the user really intends to cancel test
+bt_yes = KeyboardButton("Выйти из теста")
+bt_no = KeyboardButton("Продолжить тест")
+kbyesno = ReplyKeyboardMarkup(resize_keyboard=True)
+kbyesno.add(bt_yes, bt_no)
+
+
 # Cancel_command_button
 ccb = KeyboardButton("/cancel")
 kccb = ReplyKeyboardMarkup(resize_keyboard=True)
@@ -87,6 +94,5 @@ kbt_h.add(bt_h0).add(*all_bt_h)
 
 # A user decides to start learning
 bt_start_learning = KeyboardButton("Начать заниматься")
-bt_cancel_command = KeyboardButton("/cancel")
 kb_start_learning = ReplyKeyboardMarkup(resize_keyboard=True)
-kb_start_learning.add(bt_start_learning).add(bt_cancel_command)
+kb_start_learning.add(bt_start_learning)
