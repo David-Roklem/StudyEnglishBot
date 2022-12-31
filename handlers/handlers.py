@@ -38,7 +38,7 @@ async def cmd_cancel(message: types.Message, state: FSMContext):
     await message.delete()
 
 
-@dp.message_handler(Text(equals='Выйти из теста', ignore_case=True), state='*')
+@dp.message_handler(Text(equals='Выйти из теста', ignore_case=False), state='*')
 async def cmd_cancel_exit(message: types.Message, state: FSMContext):
     current_state = await state.get_state()
     if current_state is None:
@@ -47,7 +47,7 @@ async def cmd_cancel_exit(message: types.Message, state: FSMContext):
     await message.answer('<b>Вы вышли из теста</b>', reply_markup=kbsbcb)
 
 
-@dp.message_handler(Text(equals='Продолжить тест', ignore_case=True), state='*')
+@dp.message_handler(Text(equals='Продолжить тест', ignore_case=False), state='*')
 async def cmd_cancel_stay(message: types.Message, state: FSMContext):
     current_state = await state.get_state()
     if current_state is None:
@@ -55,15 +55,6 @@ async def cmd_cancel_stay(message: types.Message, state: FSMContext):
     await message.answer('<b>Тест продолжается. Впишите сюда⬇️ ваш ответ на последний вопрос</b>',
     reply_markup=kccb)
     await message.delete()
-    # async with state.proxy() as data:
-    #     await message.answer(data['module'][data["current_question_number"]][0], reply_markup=kccb)
-    #     if len(data['module'][data['current_question_number']]) == 3:
-    #         if "hint" in data['module'][data["current_question_number"]][2].keys():
-    #             await message.answer(
-    #                 f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][data["current_question_number"]][2].get("hint")}</u></b> |',
-    #                 reply_markup=kccb)
-    #         if "for_info" in data['module'][data["current_question_number"]][2].keys():
-    #             await message.answer(data['module'][data["current_question_number"]][2].get('for_info'), reply_markup=kccb)
 
 
 @dp.message_handler(commands=['низкий', 'средний', 'высокий'], state=States.level)

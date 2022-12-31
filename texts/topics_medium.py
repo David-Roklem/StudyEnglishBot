@@ -1,7 +1,7 @@
 from aiogram.utils.markdown import hlink
 
 
-topic_medium1 = [
+at_the_market = [
     """
     Доброе утро! Мне нужны свежие овощи.
     Доброе утро! Выбирайте, что понравится, все овощи у меня свежие.
@@ -192,7 +192,7 @@ topic_medium1 = [
 
 
 
-topic_medium2 = [
+headache = [
     """
     - Добрый день! У меня с утра болит голова. Что вы можете мне предложить?
     - Здравствуйте! Вы мерили ваше давление? - Нет, у меня нет возможности.
@@ -334,7 +334,7 @@ topic_medium2 = [
 
 
 
-topic_medium3 = [
+car_navigator = [
     """
     Ваш маршрут построен. Через 300 метров поверните направо. Двигайтесь прямо пятьсот метров.
     Держитесь левой полосы. На кольце съезжайте на третьем съезде. Езжайте прямо до первого перекрёстка. 
@@ -437,7 +437,7 @@ topic_medium3 = [
 
 
 
-topic_medium4 = [
+in_New_York = [
     """
     - Посмотри на город, какой он красивый!
     - Мне не нравится. Здесь слишком много людей.
@@ -637,7 +637,7 @@ topic_medium4 = [
 
 
 
-topic_medium5 = [
+at_the_restaurant = [
     """
     - Здравствуйте! Меня зовут Мария, я ваша официантка.
     - Я могу вам помочь с заказом?
@@ -745,4 +745,102 @@ topic_medium5 = [
         "Thank you for the order! I will bring the lemonade straight away and the dishes on readiness",
     ],
     {"hint": "the, on readiness"}),
+]
+
+
+
+
+
+
+Hawaii = [
+    """
+    Гавайские острова очень красивые. Это пятидесятый по счету штат в США. 
+    Мауна-Кеа — самая высокий среди вулканов на Гавайский островах.
+    Еще на Гавайях зародился серфинг. На Гавайях нет змей.
+    Ежегодно Гавайи посещают более 6 миллионов туристов.
+    В среднем туристы тратят на Гавайях около 11 миллиардов долларов каждый год.
+    Самый древний остров Гавайского архипелага — Кауаи, ему более 6 миллионов лет.
+    Средняя температура на островах 25 градусов. Приезжайте на отдых на Гавайи.
+    """,
+    ("Гавайские острова очень красивые",
+    [
+        "The Hawaiian Islands are very beautiful",
+        "The Hawaiian Islands are really beautiful",
+        "The Hawaiian Islands are very nice",
+        "The Hawaiian Islands are really nice",
+    ],
+    {"hint": "The Hawaiian Islands"}),
+    ("Это пятидесятый по счету штат в США",
+    [
+        "It is the fiftieth state in the US",
+        "It's the fiftieth state in the US"
+    ]),
+    ("Мауна-Кеа — самая высокий среди вулканов на Гавайский островах",
+    [
+        "Mauna Kea is the highest among volcanoes on the Hawaiian Islands",
+        "Mauna Kea's the highest among volcanoes on the Hawaiian Islands",
+        "Mauna Kea is the highest amongst volcanoes on the Hawaiian Islands",
+        "Mauna Kea's the highest amongst volcanoes on the Hawaiian Islands",
+        "Mauna Kea is the highest volcano on the Hawaiian Islands",
+        "Mauna Kea's the highest volcano on the Hawaiian Islands"
+    ],
+    {"hint": "Mauna Kea, on"},
+    {"for_info": hlink("Разница между tall и high", "http://surl.li/efzyo")}),
+    ("Еще на Гавайях зародился серфинг",
+    [
+        "Also surfing originated in Hawaii",
+        "Surfing also originated in Hawaii"
+    ],
+    {"hint": "originate in"}),
+    ("На Гавайях нет змей",
+    [
+        "There are no snakes in Hawaii",
+        "There are not any snakes in Hawaii",
+        "There aren't any snakes in Hawaii",
+        "Hawaii does not have snakes",
+        "Hawaii doesn't have snakes",
+        "Hawaii has not got snakes",
+        "Hawaii hasn't got snakes",
+    ],
+    {"hint": "in"}),
+    ("Ежегодно Гавайи посещают более 6 миллионов туристов",
+    [
+        "More than 6 million tourists visit Hawaii annually",
+        "More than 6 million tourists annually visit Hawaii",
+    ],
+    {"hint": "annually"}),
+    ("В среднем туристы тратят на Гавайях около 11 миллиардов долларов каждый год",
+    [
+        "On average, tourists spend about 11 billion dollars in Hawaii each year",
+        "Tourists spend about 11 billion dollars on average in Hawaii each year",
+        "On average, tourists spend about 11 billion dollars in Hawaii every year",
+        "Tourists spend about 11 billion dollars on average in Hawaii every year",
+    ],
+    {"hint": "on average, each"},
+    {"for_info": hlink("Разница между each и every", "http://surl.li/egafa")}),
+    ("Самый древний остров Гавайского архипелага — Кауаи, ему более 6 миллионов лет",
+    [
+        "Kauai, the oldest island in the Hawaiian archipelago, is over 6 million years old",
+        "Kauai, the most ancient island in the Hawaiian archipelago, is over 6 million years old",
+        "The oldest island in the Hawaiian archipelago is Kauai , it is over 6 million years old",
+        "The most ancient island in the Hawaiian archipelago is Kauai , it's over 6 million years old"
+    ],
+    {"hint": "the Hawaiian archipelago, over, old"}),
+    ("Средняя температура на островах 25 градусов",
+    [
+        "The average temperature on the islands is 25 degrees"
+    ],
+    {"hint": "the"}),
+    ("Приезжайте на отдых на Гавайи",
+    [
+        "Come on vacation to Hawaii",
+        "Visit Hawaii on your vacation",
+        "Come to visit Hawaii on your vacation",
+        "Come on holidays to Hawaii",
+        "Visit Hawaii on your holidays",
+        "Come to visit Hawaii on your holidays",
+        "Come on holiday to Hawaii",
+        "Visit Hawaii on your holiday",
+        "Come to visit Hawaii on your holiday",
+    ])
 ]

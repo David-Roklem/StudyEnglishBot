@@ -3,9 +3,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 # Start button
 sb = KeyboardButton("/start")
-cb = KeyboardButton("/cancel")
 kbsbcb = ReplyKeyboardMarkup(resize_keyboard=True)
-kbsbcb.add(sb).add(cb)
+kbsbcb.add(sb)
 
 
 # Check if the user really intends to cancel test
@@ -22,23 +21,21 @@ kccb.add(ccb)
 
 
 # A user chooses a level
-bl0 = KeyboardButton("/cancel")
 bl1 = KeyboardButton("/Низкий")
 bl2 = KeyboardButton("/Средний")
 bl3 = KeyboardButton("/Высокий")
 
 kbl = ReplyKeyboardMarkup(resize_keyboard=True)
 
-kbl.add(bl0).add(bl1, bl2, bl3)
+kbl.add(bl1, bl2, bl3)
 
 
 # A user chooses a topic from easy themes
-bt_e0 = KeyboardButton("/cancel")
 all_bt_e = [
-    "/topic_easy1",
-    "/topic_easy2",
-    "/topic_easy3",
-    "/topic_easy4",
+    "/a_room_for_one_night",
+    "/ordering_pizza_into_a_hotel",
+    "/decoration_of_a_Christmas_tree",
+    "/coming_to_a_new_city",
     "/topic_easy5",
     "/topic_easy6",
     "/topic_easy7",
@@ -49,17 +46,16 @@ all_bt_e = [
 
 kbt_e = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
 
-kbt_e.add(bt_e0).add(*all_bt_e)
+kbt_e.add(*all_bt_e)
 
 
 # A user chooses a topic from medium themes
-bt_m0 = KeyboardButton("/cancel")
 all_bt_m = [
-    "/topic_medium1",
-    "/topic_medium2",
-    "/topic_medium3",
-    "/topic_medium4",
-    "/topic_medium5",
+    "/at_the_market",
+    "/headache",
+    "/car_navigator",
+    "/in_New_York",
+    "/at_the_restaurant",
     "/topic_medium6",
     "/topic_medium7",
     "/topic_medium8",
@@ -69,13 +65,12 @@ all_bt_m = [
 
 kbt_m = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
 
-kbt_m.add(bt_m0).add(*all_bt_m)
+kbt_m.add(*all_bt_m)
 
 
 # A user chooses a topic from hard themes
-bt_h0 = KeyboardButton("/cancel")
 all_bt_h = [
-    "/topic_hard1",
+    "/cooking_a_sponge_cake",
     "/topic_hard2",
     "/topic_hard3",
     "/topic_hard4",
@@ -89,7 +84,7 @@ all_bt_h = [
 
 kbt_h = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
 
-kbt_h.add(bt_h0).add(*all_bt_h)
+kbt_h.add(*all_bt_h)
 
 
 # A user decides to start learning
