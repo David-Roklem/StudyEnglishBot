@@ -833,6 +833,10 @@ Hawaii = [
     {"hint": "the"}),
     ("Приезжайте на отдых на Гавайи",
     [
+        "Come to rest to Hawaii",
+        "Come to the rest to Hawaii",
+        "Come for the rest to Hawaii",
+        "Come for rest to Hawaii"
         "Come on vacation to Hawaii",
         "Visit Hawaii on your vacation",
         "Come to visit Hawaii on your vacation",
