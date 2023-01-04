@@ -1,11 +1,14 @@
+from aiogram import Bot, Dispatcher
 from aiogram.utils import executor
-from config import dp
-from handlers import handlers
+from dotenv import load_dotenv, find_dotenv
+import os
 
 
-# client_easy.register_handlers_client(dp)
-# admin.register_handlers_admin(dp)
-# other.register_handlers_other(dp)
+load_dotenv(find_dotenv())
+
+bot = Bot(os.getenv('TELEGRAM_TOKEN'))
+
+dp = Dispatcher(bot)
 
 
 async def on_startup(_):
