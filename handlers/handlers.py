@@ -1,6 +1,6 @@
 import re
 from aiogram import types, Dispatcher
-from config import dp, bot
+from bot import dp
 from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
