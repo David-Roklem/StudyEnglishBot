@@ -1,6 +1,6 @@
 import re
 from aiogram import types, Dispatcher
-from bot import dp
+from config import dp
 from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
@@ -11,7 +11,7 @@ from topics_all import list_of_topics
 import texts
 
 
-@dp.message_handler(commands='start')
+# @dp.message_handler(commands='start')
 async def cmd_start(message: types.Message, state: FSMContext):
     """
     Conversation's entry point
@@ -24,17 +24,13 @@ async def cmd_start(message: types.Message, state: FSMContext):
     <b>Выберите, пожалуйста, ваш уровень английского:</b>""", reply_markup=kbl, parse_mode="HTML")
 
 
-"""Cancel from any state"""
 @dp.message_handler(state='*', commands='cancel')
 @dp.message_handler(Text(equals='cancel', ignore_case=True), state='*')
 async def cmd_cancel(message: types.Message, state: FSMContext):
-    """
-    Allow user to cancel any action
-    """
     current_state = await state.get_state()
     if current_state is None:
         return
-    await message.answer('<b>Вы уверены, что хотите выйти из теста?</b>', reply_markup=kbyesno)
+    await message.answer('<b>Вы уверены, что хотите выйти из теста?</b>', reply_markup=kbyesno, parse_mode="HTML")
     await message.delete()
 
 
@@ -44,7 +40,7 @@ async def cmd_cancel_exit(message: types.Message, state: FSMContext):
     if current_state is None:
         return
     await state.finish()
-    await message.answer('<b>Вы вышли из теста</b>', reply_markup=kbsbcb)
+    await message.answer('<b>Вы вышли из теста</b>', reply_markup=kbsbcb, parse_mode="HTML")
 
 
 @dp.message_handler(Text(equals='Продолжить тест', ignore_case=False), state='*')
@@ -53,11 +49,11 @@ async def cmd_cancel_stay(message: types.Message, state: FSMContext):
     if current_state is None:
         return
     await message.answer('<b>Тест продолжается. Впишите сюда⬇️ ваш ответ на последний вопрос</b>',
-    reply_markup=kccb)
+    reply_markup=kccb, parse_mode="HTML")
     await message.delete()
 
 
-@dp.message_handler(commands=['низкий', 'средний', 'высокий'], state=States.level)
+# @dp.message_handler(commands=['низкий', 'средний', 'высокий'], state=States.level)
 async def cmd_choose_level(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['user_level'] = message.text
@@ -70,7 +66,7 @@ async def cmd_choose_level(message: types.Message, state: FSMContext):
     await States.next()
 
 
-@dp.message_handler(commands=list_of_topics, state=States.topic)
+# @dp.message_handler(commands=list_of_topics, state=States.topic)
 async def determine_topic_and_show_first_question(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['user_topic'] = message.text
@@ -93,7 +89,7 @@ async def determine_topic_and_show_first_question(message: types.Message, state:
     await States.next()
 
 
-@dp.message_handler(Text(equals='Начать заниматься', ignore_case=True), state=States.show_whole_text)
+# @dp.message_handler(Text(equals='Начать заниматься', ignore_case=True), state=States.show_whole_text)
 async def begin_learning(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['current_question_number'] = 1
@@ -102,7 +98,7 @@ async def begin_learning(message: types.Message, state: FSMContext):
             if "hint" in data['module'][1][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][1][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][1][2].keys():
                 await message.answer(data['module'][1][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -124,7 +120,7 @@ async def process_q_1(message: types.Message, state: FSMContext):
             if "hint" in data['module'][2][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][2][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][2][2].keys():
                 await message.answer(data['module'][2][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -146,7 +142,7 @@ async def process_q_2(message: types.Message, state: FSMContext):
             if "hint" in data['module'][3][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][3][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][3][2].keys():
                 await message.answer(data['module'][3][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -168,7 +164,7 @@ async def process_q_3(message: types.Message, state: FSMContext):
             if "hint" in data['module'][4][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][4][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][4][2].keys():
                 await message.answer(data['module'][4][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -190,14 +186,14 @@ async def process_q_4(message: types.Message, state: FSMContext):
             if "hint" in data['module'][5][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][5][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][5][2].keys():
                 await message.answer(data['module'][5][2].get('for_info'), reply_markup=kccb)
     await States.next()
 
 
 @dp.message_handler(state=States.q_5)
-async def process_q_1(message: types.Message, state: FSMContext):
+async def process_q_5(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['current_question_number'] = 6
         data['all_answers_lowered_q_5'] = list((re.sub("[^A-Za-z0-9]", "", i.lower()) for i in data['module'][5][1]))
@@ -212,7 +208,7 @@ async def process_q_1(message: types.Message, state: FSMContext):
             if "hint" in data['module'][6][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][6][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][6][2].keys():
                 await message.answer(data['module'][6][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -234,7 +230,7 @@ async def process_q_6(message: types.Message, state: FSMContext):
             if "hint" in data['module'][7][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][7][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][7][2].keys():
                 await message.answer(data['module'][7][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -256,7 +252,7 @@ async def process_q_7(message: types.Message, state: FSMContext):
             if "hint" in data['module'][8][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][8][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][8][2].keys():
                 await message.answer(data['module'][8][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -278,7 +274,7 @@ async def process_q_8(message: types.Message, state: FSMContext):
             if "hint" in data['module'][9][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][9][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][9][2].keys():
                 await message.answer(data['module'][9][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -300,7 +296,7 @@ async def process_q_9(message: types.Message, state: FSMContext):
             if "hint" in data['module'][10][2].keys():
                 await message.answer(
                     f'| <i>Подсказка</i>☝️: используйте <b><u>{data["module"][10][2].get("hint")}</u></b> |',
-                    reply_markup=kccb)
+                    reply_markup=kccb, parse_mode="HTML")
             if "for_info" in data['module'][10][2].keys():
                 await message.answer(data['module'][10][2].get('for_info'), reply_markup=kccb)
     await States.next()
@@ -320,3 +316,25 @@ async def process_q_10(message: types.Message, state: FSMContext):
         await message.answer(f"Ваш результат: <b>{data['score']} из {len(data['module']) - 1}</b>", 
         parse_mode="HTML", reply_markup=kbsbcb)
     await state.finish()
+
+
+def register_all_handlers(dp: Dispatcher):
+    dp.register_message_handler(cmd_start, commands='start', state=None)
+    # dp.register_message_handler(cmd_cancel, state='*', commands=['cancel'])
+    # dp.register_message_handler(cmd_cancel, Text(equals='cancel', ignore_case=True), state='*')
+    # dp.register_message_handler(cmd_cancel_exit, Text(equals='Выйти из теста', ignore_case=False), state='*')
+    # dp.register_message_handler(cmd_cancel_stay, Text(equals='Продолжить тест', ignore_case=False), state='*')
+    dp.register_message_handler(cmd_choose_level, commands=['низкий', 'средний', 'высокий'], state=States.level)
+    dp.register_message_handler(determine_topic_and_show_first_question, commands=list_of_topics, state=States.topic)
+    dp.register_message_handler(begin_learning, Text(
+        equals='Начать заниматься', ignore_case=True), state=States.show_whole_text)
+    dp.register_message_handler(process_q_1, state=States.q_1)
+    dp.register_message_handler(process_q_2, state=States.q_2)
+    dp.register_message_handler(process_q_3, state=States.q_3)
+    dp.register_message_handler(process_q_4, state=States.q_4)
+    dp.register_message_handler(process_q_5, state=States.q_5)
+    dp.register_message_handler(process_q_6, state=States.q_6)
+    dp.register_message_handler(process_q_7, state=States.q_7)
+    dp.register_message_handler(process_q_8, state=States.q_8)
+    dp.register_message_handler(process_q_9, state=States.q_9)
+    dp.register_message_handler(process_q_10, state=States.q_10)
