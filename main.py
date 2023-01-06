@@ -5,6 +5,7 @@ from config import dp
 
 handlers.register_all_handlers(dp)
 
+
 async def on_startup(_):
     print("Bot's online! 2translate")
 
