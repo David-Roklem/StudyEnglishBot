@@ -1,0 +1,4 @@
+services:
+  bot:
+    build: .
+    image: roklem/study-english-bot:latest
