@@ -38,10 +38,6 @@ all_bt_e = [
     "/coming_to_a_new_city",
     "/topic_easy5",
     "/topic_easy6",
-    "/topic_easy7",
-    "/topic_easy8",
-    "/topic_easy9",
-    "/topic_easy10"
 ]
 
 kbt_e = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
