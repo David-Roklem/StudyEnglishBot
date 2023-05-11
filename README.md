@@ -6,3 +6,8 @@ improve their writing skills. Learning process is based on aspect of translation
 There are three levels of difficulty. Each topic consists of 10 questions-translations. Good luck!
 
 @StudyEnglishWithDavidBot
+
+P.S. Если есть желание попробовать бота на деле, свяжитесь со мной, чтобы я запустил его на ноуте, т.к. проект не задеплоен :)
+roklem@mail.ru
++79818396167 Whatsapp
+Telegram https://t.me/DavidVarvashtyan
