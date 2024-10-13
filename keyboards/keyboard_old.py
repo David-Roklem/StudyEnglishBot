@@ -2,7 +2,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
 # Start button
-sb = KeyboardButton("/start")
+sb = KeyboardButton("start")
 kbsbcb = ReplyKeyboardMarkup(resize_keyboard=True)
 kbsbcb.add(sb)
 
