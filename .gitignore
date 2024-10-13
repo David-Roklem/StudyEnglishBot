@@ -1,2 +1,13 @@
-.env
 .idea
+*.pyc
+__pycache__
+.venv
+env
+.env
+*.log
+.vscode/
+log.txt
+logs/
+data/
+hosts/
+www/
