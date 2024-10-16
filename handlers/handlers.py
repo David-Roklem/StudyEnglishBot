@@ -1,7 +1,7 @@
 import re
 from aiogram import types, Dispatcher
 from aiogram.filters import Command
-from config import dp
+from config import dp, router
 # from aiogram.dispatcher.filters import Text
 # from aiogram.dispatcher import FSMContext
 # from aiogram.dispatcher.filters.state import State, StatesGroup
@@ -12,24 +12,10 @@ from topics_all import list_of_topics
 # import texts
 
 
-# @dp.message_handler(commands='start')
-# async def cmd_start(message: types.Message, state: FSMContext):
-@dp.message(Command("start"))
-async def cmd_start(message: types.Message):
-    """
-    Conversation's entry point
-    """
-    # await States.level.set()
-    await message.answer("""Итак, начнём! Вам будут предлагаться на выбор тексты разных тематик и уровней сложности.
-    Ваша задача - перевести топик, данный на русском языке, на английский.
-    Процесс строится по принципу «предложение -> перевод». Успехов!
 
-    <b>Выберите, пожалуйста, ваш уровень английского:</b>""")
-    # <b>Выберите, пожалуйста, ваш уровень английского:</b>""", reply_markup=kbl, parse_mode="HTML")
-    
 
-# @dp.message_handler(state='*', commands='cancel')
-# @dp.message_handler(Text(equals='cancel', ignore_case=True), state='*')
+# @router.message_handler(state='*', commands='cancel')
+# @router.message_handler(Text(equals='cancel', ignore_case=True), state='*')
 # async def cmd_cancel(message: types.Message, state: FSMContext):
 #     current_state = await state.get_state()
 #     if current_state is None:
