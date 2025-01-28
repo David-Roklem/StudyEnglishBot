@@ -1,7 +1,3 @@
-from aiogram import Bot, Router
-from aiogram import Dispatcher
-# from aiogram.contrib.fsm_storage.memory import MemoryStorage
-# from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 

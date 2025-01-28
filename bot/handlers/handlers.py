@@ -1,14 +1,14 @@
 import re
 from aiogram import types, Dispatcher
 from aiogram.filters import Command
-from config import dp, router
+from config_data.config import dp, router
 # from aiogram.dispatcher.filters import Text
 # from aiogram.dispatcher import FSMContext
 # from aiogram.dispatcher.filters.state import State, StatesGroup
 # from aiogram.types import ReplyKeyboardRemove
 # from keyboards.keyboard import kbsbcb, kbl, kbt_e, kbt_m, kbt_h, kb_start_learning, kccb, kbyesno
 # from FSMstates.states import States
-from topics_all import list_of_topics
+from bot.texts.topics_all import list_of_topics
 # import texts
 
 
