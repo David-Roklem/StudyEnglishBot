@@ -5,7 +5,10 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 # from handlers import handlers
 from config_data.config import settings
-from bot.handlers import base_handlers
+from handlers import base_handlers
+from handlers.inline_kb_callbacks.start_menu import start_menu
+from handlers.inline_kb_callbacks.exercises_menu import exercises_menu
+# from handlers.inline_kb_callbacks.levels_menu import levels_menu
 from keyboards.menu_button import set_menu_button
 
 logger = logging.getLogger(__name__)
@@ -26,6 +29,9 @@ async def main():
     # Регистрируем асинхронную функцию в диспетчере, которая будет выполняться на старте бота
     dp.startup.register(set_menu_button)
     dp.include_router(base_handlers.router)
+    dp.include_router(start_menu.start_menu_router)
+    dp.include_router(exercises_menu.exercises_menu_router)
+    # dp.include_router(levels_menu.levels_menu_router)
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)

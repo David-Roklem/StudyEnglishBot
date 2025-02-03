@@ -1,14 +1,25 @@
+from pprint import pprint
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from handlers.inline_kb_callbacks.callback_factory import Level, LevelCallbackFactory
 
 
 def create_inline_kb(width: int,
+                     *args: str,
+                     button_source: list | None = None,
                      last_btn: str | None = None,
                      **kwargs: str) -> InlineKeyboardMarkup:
     # Инициализируем билдер
     kb_builder = InlineKeyboardBuilder()
     # Инициализируем список для кнопок
     buttons: list[InlineKeyboardButton] = []
+
+    # Заполняем список кнопками из аргументов args и kwargs
+    if args:
+        for button in args:
+            buttons.append(InlineKeyboardButton(
+                text=button_source[button] if button in button_source else button,
+                callback_data=button))
 
     # Заполняем список кнопками из аргументов kwargs
     if kwargs:
@@ -27,4 +38,14 @@ def create_inline_kb(width: int,
         ))
 
     # Возвращаем объект инлайн-клавиатуры
+    return kb_builder.as_markup()
+
+
+def create_kb_exercises_levels() -> InlineKeyboardMarkup:
+    kb_builder = InlineKeyboardBuilder()
+    for lvl in Level:
+        kb_builder.button(
+            text=lvl.value.title(),
+            callback_data=LevelCallbackFactory(lvl=lvl)
+        )
     return kb_builder.as_markup()
