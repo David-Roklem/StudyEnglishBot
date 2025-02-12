@@ -6,7 +6,7 @@ from FSMstates import states
 MAIN_MENU_BUTTON = Start(
     text=Const("☰ Main menu"),
     id="__main__",
-    state=states.StartMenu.START_MENU,
+    state=states.StartMenu.MAIN,
 )
 
 

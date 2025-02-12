@@ -17,13 +17,37 @@ from aiogram.filters.state import State, StatesGroup
 #     q_10 = State()
 
 class StartMenu(StatesGroup):
-    START_MENU = State()
+    MAIN = State()
 
 
 class Exercise(StatesGroup):
-    START_MENU = State()
+    MAIN = State()
     A1 = State()
     A2 = State()
     B1 = State()
     B2 = State()
     C1 = State()
+
+
+class Usage(StatesGroup):
+    MAIN = State()
+
+
+class Books(StatesGroup):
+    MAIN = State()
+
+
+class Rating(StatesGroup):
+    MAIN = State()
+
+
+class LearnWords(StatesGroup):
+    MAIN = State()
+
+
+class Notifications(StatesGroup):
+    MAIN = State()
+
+
+class Feedback(StatesGroup):
+    MAIN = State()
