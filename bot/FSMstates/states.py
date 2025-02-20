@@ -21,19 +21,20 @@ class StartMenu(StatesGroup):
 
 
 class Exercise(StatesGroup):
+    level = State()
+    category = State()
+    type = State()
+
+
+class ExactExercise(StatesGroup):
     MAIN = State()
-    A1 = State()
-    A2 = State()
-    B1 = State()
-    B2 = State()
-    C1 = State()
 
 
 class Usage(StatesGroup):
     MAIN = State()
 
 
-class Books(StatesGroup):
+class Book(StatesGroup):
     MAIN = State()
 
 
