@@ -1,20 +1,16 @@
 from aiogram import Router
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
-from text_templates.inline_buttons import BUTTONS_START_MENU
+from aiogram_dialog import DialogManager, StartMode
+from FSMstates import states
 from text_templates import base_commands
-from keyboards.inline_keyboards.inline_kb import create_inline_kb
 
 router = Router()
 
 
 @router.message(CommandStart())
-async def cmd_start_testing_inline_kb(message: Message):
-    """
-    testing_inline_kb
-    """
-    keyboard = create_inline_kb(2, **BUTTONS_START_MENU)
-    await message.answer(text="Потестим Инлайн клаву", reply_markup=keyboard)
+async def command_start_process(message: Message, dialog_manager: DialogManager):
+    await dialog_manager.start(state=states.StartMenu.MAIN, mode=StartMode.RESET_STACK)
 
 
 @router.message(Command(commands='help'))
