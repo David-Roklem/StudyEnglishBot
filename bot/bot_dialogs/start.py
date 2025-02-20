@@ -27,12 +27,12 @@ start_menu_dialog = Dialog(
             Start(
                 text=Const("Упражнения"),
                 id=BUTTONS_START_MENU["Упражнения"],
-                state=states.Exercise.MAIN,
+                state=states.Exercise.level,
             ),
             Start(
                 text=Const("Книги на английском"),
                 id=BUTTONS_START_MENU["Книги на английском"],
-                state=states.Books.MAIN,
+                state=states.Book.MAIN,
             ),
             Start(
                 text=Const("Рейтинг участников"),
