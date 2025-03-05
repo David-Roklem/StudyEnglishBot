@@ -100,7 +100,7 @@ async def to_exercise(callback: CallbackQuery, button: Button, dialog_manager: D
     await dialog_manager.start(state=states.ExactExercise.MAIN, data=exercise_data)
 
 
-types_dialog = Window(
+types_window = Window(
     Const(CHOOSE_EXERCISE_TYPE),
     Row(
         Button(
@@ -122,7 +122,7 @@ types_dialog = Window(
 exercise_dialog = Dialog(
     levels_window,
     categories_window,
-    types_dialog,
+    types_window,
 )
 
 
