@@ -3,6 +3,9 @@ import logging
 from aiogram import Dispatcher, Bot
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
+from middlewares.session import DbSessionMiddleware
+from middlewares.track_all_users import TrackAllUsersMiddleware
 import bot_dialogs
 from config_data.config import settings
 from handlers import base_handlers
@@ -13,6 +16,8 @@ logger = logging.getLogger(__name__)
 
 
 async def main():
+
+    engine = create_async_engine(url=str(settings.DB_URL), echo=settings.IS_ECHO)
 
     dialogs_to_register = [
         # start menu
@@ -36,6 +41,11 @@ async def main():
 
     bot = Bot(settings.bot_token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     dp = Dispatcher()
+
+    # Подключение мидлварей
+    Sessionmaker = async_sessionmaker(engine, expire_on_commit=False)
+    dp.update.outer_middleware(DbSessionMiddleware(Sessionmaker))
+    dp.message.outer_middleware(TrackAllUsersMiddleware())
 
     dp.startup.register(set_menu_button)
     dp.include_router(base_handlers.router)
