@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 async def main():
 
-    engine = create_async_engine(url=str(settings.DB_URL), echo=settings.IS_ECHO)
+    engine = create_async_engine(url=str(settings.DB_URL))
 
     dialogs_to_register = [
         # start menu
