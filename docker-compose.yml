@@ -1,4 +1,14 @@
+version: '3.8'
+
 services:
-  bot:
-    build: .
-    image: roklem/study-english-bot:latest
+  db:
+    image: postgres:17-alpine
+    restart: always
+    env_file: ".env"
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
