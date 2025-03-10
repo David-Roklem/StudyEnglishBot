@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.dialects.postgresql import insert as upsert
 
-from db.models import User
+from models.user import User
 
 
 async def upsert_user(
