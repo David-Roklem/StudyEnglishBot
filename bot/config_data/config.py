@@ -20,6 +20,8 @@ class Settings(BaseSettings):
     POSTGRES_DB: str
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str
+    POSTGRES_PORT: str
+    POSTGRES_HOST: str
 
     DB_URL: str = Field('', validation_alias='DB_URL')
 
@@ -29,7 +31,7 @@ class Settings(BaseSettings):
 
     def __construct_db_url(self) -> str:
         return (f"postgresql+psycopg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@"
-                f"localhost:5433/{self.POSTGRES_DB}")
+                f"{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}")
 
 
 @lru_cache
