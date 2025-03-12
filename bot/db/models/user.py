@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import BigInteger, String, Text
-from base import Base
+from .base import Base
 
 
 class User(Base):
