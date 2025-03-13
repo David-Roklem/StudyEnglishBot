@@ -39,4 +39,4 @@ To run the project on your local machine you should follow these steps:
 alembic revision --autogenerate "<Migration name>"
 alembic upgrade head
 ```
-3. run bot/main.py file to start interacting with the bot
+3. run `bot/main.py` file to start interacting with the bot
