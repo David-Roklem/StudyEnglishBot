@@ -11,3 +11,6 @@ class Level(Base):
     __tablename__ = "levels"
     name: Mapped[str] = mapped_column(String(20), nullable=False)
     question: Mapped["Question"] = relationship(back_populates="level")
+
+    def __repr__(self) -> str:
+        return f"Level(id={self.id!r}, name={self.name})"

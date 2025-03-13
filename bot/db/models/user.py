@@ -13,5 +13,5 @@ class User(Base):
     # на уровне Алхимии email никак не валидировать, нужно делать на уровне прилож (Пайдантик)
 
     def __repr__(self) -> str:
-        return (f"User(id={self.id!r}, telegram_id={self.telegram_id}, first_name={self.first_name!r}, "
+        return (f"User(id={self.id!r}, telegram_id={self.telegram_id!r}, first_name={self.first_name!r}, "
                 f"last_name={self.last_name!r}, phone_number={self.phone_number!r}, email={self.email!r})")
