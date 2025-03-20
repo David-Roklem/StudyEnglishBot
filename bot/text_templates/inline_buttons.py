@@ -39,6 +39,6 @@ BUTTONS_EXERCISES_CATEGORY = {
 
 CHOOSE_EXERCISE_CATEGORY = "Выберите категорию упражнения:"
 
-CHOOSE_EXERCISE_TYPE = "Здес будут парситься типы упр-й из БД на основе сохраненных в диалог менеджере данных о выборе юзера"
+CHOOSE_EXERCISE_SUBCATEGORY = "Здесь будут парситься типы упр-й из БД на основе сохраненных в диалог менеджере данных о выборе юзера"
 
 EXERCISES_MENU_TEXT = {v: CHOOSE_LVL for _, v in BUTTONS_EXERCISES_CATEGORY.items()}

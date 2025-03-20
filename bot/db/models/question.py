@@ -17,3 +17,6 @@ class Question(Base):
     subcategory_id: Mapped[uuid4] = mapped_column(ForeignKey("subcategories.id"), nullable=False)
     answers: Mapped[list["Answer"]] = relationship(back_populates="question")
     level: Mapped[list["Level"]] = relationship(back_populates="question")
+
+    def __repr__(self):
+        return f"Question(text={self.text})"

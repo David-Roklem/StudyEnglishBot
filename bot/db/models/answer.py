@@ -15,3 +15,6 @@ class Answer(Base):
     is_correct: Mapped[bool] = mapped_column(Boolean, nullable=False)
     question_id: Mapped[uuid4] = mapped_column(ForeignKey("questions.id"), nullable=False)
     question: Mapped["Question"] = relationship(back_populates="answers")
+
+    def __repr__(self):
+        return f"Answer(text={self.text}, is_correct={self.is_correct})"

@@ -23,7 +23,7 @@ class StartMenu(StatesGroup):
 class Exercise(StatesGroup):
     level = State()
     category = State()
-    type = State()
+    subcategory = State()
 
 
 class ExactExercise(StatesGroup):
